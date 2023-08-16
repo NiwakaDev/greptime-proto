@@ -51,6 +51,29 @@ message CreateTableExpr {
   TableId table_id = 10;
   repeated uint32 region_numbers = 11;
   string engine = 12;
+  PartitionsDef partitions_def = 13;
+}
+
+message PartitionsDef {
+  message MaxValue {
+    int32 unused = 1;
+  }
+  message ValueDef {
+    oneof value {
+      MaxValue max_value = 1;
+      int32 int32_value = 2;
+      float float32_value = 3;
+      double float64_value = 4;
+      string string_value = 5;
+      bool bool_value = 6;
+    }
+  }
+  message PartitionDef {
+    string name = 1;
+    repeated ValueDef value_defs = 2;
+  }
+  repeated string column_names = 1;
+  repeated PartitionDef partition_defs = 2;
 }
 
 message AlterExpr {
