@@ -60,7 +60,7 @@ message PartitionsDef {
 
   }
   message ValueDef {
-    oneof content {
+    oneof right_bound {
       MaxValue max_value = 1;
       Value value = 2;
     }

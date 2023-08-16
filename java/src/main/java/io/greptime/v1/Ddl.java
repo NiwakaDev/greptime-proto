@@ -5647,7 +5647,7 @@ java.lang.String defaultValue);
        */
       io.greptime.v1.RowData.ValueOrBuilder getValueOrBuilder();
 
-      public io.greptime.v1.Ddl.PartitionsDef.ValueDef.ContentCase getContentCase();
+      public io.greptime.v1.Ddl.PartitionsDef.ValueDef.RightBoundCase getRightBoundCase();
     }
     /**
      * Protobuf type {@code greptime.v1.PartitionsDef.ValueDef}
@@ -5696,30 +5696,30 @@ java.lang.String defaultValue);
                 break;
               case 10: {
                 io.greptime.v1.Ddl.PartitionsDef.MaxValue.Builder subBuilder = null;
-                if (contentCase_ == 1) {
-                  subBuilder = ((io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_).toBuilder();
+                if (rightBoundCase_ == 1) {
+                  subBuilder = ((io.greptime.v1.Ddl.PartitionsDef.MaxValue) rightBound_).toBuilder();
                 }
-                content_ =
+                rightBound_ =
                     input.readMessage(io.greptime.v1.Ddl.PartitionsDef.MaxValue.parser(), extensionRegistry);
                 if (subBuilder != null) {
-                  subBuilder.mergeFrom((io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_);
-                  content_ = subBuilder.buildPartial();
+                  subBuilder.mergeFrom((io.greptime.v1.Ddl.PartitionsDef.MaxValue) rightBound_);
+                  rightBound_ = subBuilder.buildPartial();
                 }
-                contentCase_ = 1;
+                rightBoundCase_ = 1;
                 break;
               }
               case 18: {
                 io.greptime.v1.RowData.Value.Builder subBuilder = null;
-                if (contentCase_ == 2) {
-                  subBuilder = ((io.greptime.v1.RowData.Value) content_).toBuilder();
+                if (rightBoundCase_ == 2) {
+                  subBuilder = ((io.greptime.v1.RowData.Value) rightBound_).toBuilder();
                 }
-                content_ =
+                rightBound_ =
                     input.readMessage(io.greptime.v1.RowData.Value.parser(), extensionRegistry);
                 if (subBuilder != null) {
-                  subBuilder.mergeFrom((io.greptime.v1.RowData.Value) content_);
-                  content_ = subBuilder.buildPartial();
+                  subBuilder.mergeFrom((io.greptime.v1.RowData.Value) rightBound_);
+                  rightBound_ = subBuilder.buildPartial();
                 }
-                contentCase_ = 2;
+                rightBoundCase_ = 2;
                 break;
               }
               default: {
@@ -5756,16 +5756,16 @@ java.lang.String defaultValue);
                 io.greptime.v1.Ddl.PartitionsDef.ValueDef.class, io.greptime.v1.Ddl.PartitionsDef.ValueDef.Builder.class);
       }
 
-      private int contentCase_ = 0;
-      private java.lang.Object content_;
-      public enum ContentCase
+      private int rightBoundCase_ = 0;
+      private java.lang.Object rightBound_;
+      public enum RightBoundCase
           implements com.google.protobuf.Internal.EnumLite,
               com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         MAX_VALUE(1),
         VALUE(2),
-        CONTENT_NOT_SET(0);
+        RIGHTBOUND_NOT_SET(0);
         private final int value;
-        private ContentCase(int value) {
+        private RightBoundCase(int value) {
           this.value = value;
         }
         /**
@@ -5774,15 +5774,15 @@ java.lang.String defaultValue);
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
-        public static ContentCase valueOf(int value) {
+        public static RightBoundCase valueOf(int value) {
           return forNumber(value);
         }
 
-        public static ContentCase forNumber(int value) {
+        public static RightBoundCase forNumber(int value) {
           switch (value) {
             case 1: return MAX_VALUE;
             case 2: return VALUE;
-            case 0: return CONTENT_NOT_SET;
+            case 0: return RIGHTBOUND_NOT_SET;
             default: return null;
           }
         }
@@ -5791,10 +5791,10 @@ java.lang.String defaultValue);
         }
       };
 
-      public ContentCase
-      getContentCase() {
-        return ContentCase.forNumber(
-            contentCase_);
+      public RightBoundCase
+      getRightBoundCase() {
+        return RightBoundCase.forNumber(
+            rightBoundCase_);
       }
 
       public static final int MAX_VALUE_FIELD_NUMBER = 1;
@@ -5804,7 +5804,7 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public boolean hasMaxValue() {
-        return contentCase_ == 1;
+        return rightBoundCase_ == 1;
       }
       /**
        * <code>.greptime.v1.PartitionsDef.MaxValue max_value = 1;</code>
@@ -5812,8 +5812,8 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public io.greptime.v1.Ddl.PartitionsDef.MaxValue getMaxValue() {
-        if (contentCase_ == 1) {
-           return (io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_;
+        if (rightBoundCase_ == 1) {
+           return (io.greptime.v1.Ddl.PartitionsDef.MaxValue) rightBound_;
         }
         return io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance();
       }
@@ -5822,8 +5822,8 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public io.greptime.v1.Ddl.PartitionsDef.MaxValueOrBuilder getMaxValueOrBuilder() {
-        if (contentCase_ == 1) {
-           return (io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_;
+        if (rightBoundCase_ == 1) {
+           return (io.greptime.v1.Ddl.PartitionsDef.MaxValue) rightBound_;
         }
         return io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance();
       }
@@ -5835,7 +5835,7 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public boolean hasValue() {
-        return contentCase_ == 2;
+        return rightBoundCase_ == 2;
       }
       /**
        * <code>.greptime.v1.Value value = 2;</code>
@@ -5843,8 +5843,8 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public io.greptime.v1.RowData.Value getValue() {
-        if (contentCase_ == 2) {
-           return (io.greptime.v1.RowData.Value) content_;
+        if (rightBoundCase_ == 2) {
+           return (io.greptime.v1.RowData.Value) rightBound_;
         }
         return io.greptime.v1.RowData.Value.getDefaultInstance();
       }
@@ -5853,8 +5853,8 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public io.greptime.v1.RowData.ValueOrBuilder getValueOrBuilder() {
-        if (contentCase_ == 2) {
-           return (io.greptime.v1.RowData.Value) content_;
+        if (rightBoundCase_ == 2) {
+           return (io.greptime.v1.RowData.Value) rightBound_;
         }
         return io.greptime.v1.RowData.Value.getDefaultInstance();
       }
@@ -5873,11 +5873,11 @@ java.lang.String defaultValue);
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (contentCase_ == 1) {
-          output.writeMessage(1, (io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_);
+        if (rightBoundCase_ == 1) {
+          output.writeMessage(1, (io.greptime.v1.Ddl.PartitionsDef.MaxValue) rightBound_);
         }
-        if (contentCase_ == 2) {
-          output.writeMessage(2, (io.greptime.v1.RowData.Value) content_);
+        if (rightBoundCase_ == 2) {
+          output.writeMessage(2, (io.greptime.v1.RowData.Value) rightBound_);
         }
         unknownFields.writeTo(output);
       }
@@ -5888,13 +5888,13 @@ java.lang.String defaultValue);
         if (size != -1) return size;
 
         size = 0;
-        if (contentCase_ == 1) {
+        if (rightBoundCase_ == 1) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, (io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_);
+            .computeMessageSize(1, (io.greptime.v1.Ddl.PartitionsDef.MaxValue) rightBound_);
         }
-        if (contentCase_ == 2) {
+        if (rightBoundCase_ == 2) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, (io.greptime.v1.RowData.Value) content_);
+            .computeMessageSize(2, (io.greptime.v1.RowData.Value) rightBound_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -5911,8 +5911,8 @@ java.lang.String defaultValue);
         }
         io.greptime.v1.Ddl.PartitionsDef.ValueDef other = (io.greptime.v1.Ddl.PartitionsDef.ValueDef) obj;
 
-        if (!getContentCase().equals(other.getContentCase())) return false;
-        switch (contentCase_) {
+        if (!getRightBoundCase().equals(other.getRightBoundCase())) return false;
+        switch (rightBoundCase_) {
           case 1:
             if (!getMaxValue()
                 .equals(other.getMaxValue())) return false;
@@ -5935,7 +5935,7 @@ java.lang.String defaultValue);
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
-        switch (contentCase_) {
+        switch (rightBoundCase_) {
           case 1:
             hash = (37 * hash) + MAX_VALUE_FIELD_NUMBER;
             hash = (53 * hash) + getMaxValue().hashCode();
@@ -6080,8 +6080,8 @@ java.lang.String defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
-          contentCase_ = 0;
-          content_ = null;
+          rightBoundCase_ = 0;
+          rightBound_ = null;
           return this;
         }
 
@@ -6108,21 +6108,21 @@ java.lang.String defaultValue);
         @java.lang.Override
         public io.greptime.v1.Ddl.PartitionsDef.ValueDef buildPartial() {
           io.greptime.v1.Ddl.PartitionsDef.ValueDef result = new io.greptime.v1.Ddl.PartitionsDef.ValueDef(this);
-          if (contentCase_ == 1) {
+          if (rightBoundCase_ == 1) {
             if (maxValueBuilder_ == null) {
-              result.content_ = content_;
+              result.rightBound_ = rightBound_;
             } else {
-              result.content_ = maxValueBuilder_.build();
+              result.rightBound_ = maxValueBuilder_.build();
             }
           }
-          if (contentCase_ == 2) {
+          if (rightBoundCase_ == 2) {
             if (valueBuilder_ == null) {
-              result.content_ = content_;
+              result.rightBound_ = rightBound_;
             } else {
-              result.content_ = valueBuilder_.build();
+              result.rightBound_ = valueBuilder_.build();
             }
           }
-          result.contentCase_ = contentCase_;
+          result.rightBoundCase_ = rightBoundCase_;
           onBuilt();
           return result;
         }
@@ -6171,7 +6171,7 @@ java.lang.String defaultValue);
 
         public Builder mergeFrom(io.greptime.v1.Ddl.PartitionsDef.ValueDef other) {
           if (other == io.greptime.v1.Ddl.PartitionsDef.ValueDef.getDefaultInstance()) return this;
-          switch (other.getContentCase()) {
+          switch (other.getRightBoundCase()) {
             case MAX_VALUE: {
               mergeMaxValue(other.getMaxValue());
               break;
@@ -6180,7 +6180,7 @@ java.lang.String defaultValue);
               mergeValue(other.getValue());
               break;
             }
-            case CONTENT_NOT_SET: {
+            case RIGHTBOUND_NOT_SET: {
               break;
             }
           }
@@ -6212,17 +6212,17 @@ java.lang.String defaultValue);
           }
           return this;
         }
-        private int contentCase_ = 0;
-        private java.lang.Object content_;
-        public ContentCase
-            getContentCase() {
-          return ContentCase.forNumber(
-              contentCase_);
+        private int rightBoundCase_ = 0;
+        private java.lang.Object rightBound_;
+        public RightBoundCase
+            getRightBoundCase() {
+          return RightBoundCase.forNumber(
+              rightBoundCase_);
         }
 
-        public Builder clearContent() {
-          contentCase_ = 0;
-          content_ = null;
+        public Builder clearRightBound() {
+          rightBoundCase_ = 0;
+          rightBound_ = null;
           onChanged();
           return this;
         }
@@ -6236,7 +6236,7 @@ java.lang.String defaultValue);
          */
         @java.lang.Override
         public boolean hasMaxValue() {
-          return contentCase_ == 1;
+          return rightBoundCase_ == 1;
         }
         /**
          * <code>.greptime.v1.PartitionsDef.MaxValue max_value = 1;</code>
@@ -6245,12 +6245,12 @@ java.lang.String defaultValue);
         @java.lang.Override
         public io.greptime.v1.Ddl.PartitionsDef.MaxValue getMaxValue() {
           if (maxValueBuilder_ == null) {
-            if (contentCase_ == 1) {
-              return (io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_;
+            if (rightBoundCase_ == 1) {
+              return (io.greptime.v1.Ddl.PartitionsDef.MaxValue) rightBound_;
             }
             return io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance();
           } else {
-            if (contentCase_ == 1) {
+            if (rightBoundCase_ == 1) {
               return maxValueBuilder_.getMessage();
             }
             return io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance();
@@ -6264,12 +6264,12 @@ java.lang.String defaultValue);
             if (value == null) {
               throw new NullPointerException();
             }
-            content_ = value;
+            rightBound_ = value;
             onChanged();
           } else {
             maxValueBuilder_.setMessage(value);
           }
-          contentCase_ = 1;
+          rightBoundCase_ = 1;
           return this;
         }
         /**
@@ -6278,12 +6278,12 @@ java.lang.String defaultValue);
         public Builder setMaxValue(
             io.greptime.v1.Ddl.PartitionsDef.MaxValue.Builder builderForValue) {
           if (maxValueBuilder_ == null) {
-            content_ = builderForValue.build();
+            rightBound_ = builderForValue.build();
             onChanged();
           } else {
             maxValueBuilder_.setMessage(builderForValue.build());
           }
-          contentCase_ = 1;
+          rightBoundCase_ = 1;
           return this;
         }
         /**
@@ -6291,22 +6291,22 @@ java.lang.String defaultValue);
          */
         public Builder mergeMaxValue(io.greptime.v1.Ddl.PartitionsDef.MaxValue value) {
           if (maxValueBuilder_ == null) {
-            if (contentCase_ == 1 &&
-                content_ != io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance()) {
-              content_ = io.greptime.v1.Ddl.PartitionsDef.MaxValue.newBuilder((io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_)
+            if (rightBoundCase_ == 1 &&
+                rightBound_ != io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance()) {
+              rightBound_ = io.greptime.v1.Ddl.PartitionsDef.MaxValue.newBuilder((io.greptime.v1.Ddl.PartitionsDef.MaxValue) rightBound_)
                   .mergeFrom(value).buildPartial();
             } else {
-              content_ = value;
+              rightBound_ = value;
             }
             onChanged();
           } else {
-            if (contentCase_ == 1) {
+            if (rightBoundCase_ == 1) {
               maxValueBuilder_.mergeFrom(value);
             } else {
               maxValueBuilder_.setMessage(value);
             }
           }
-          contentCase_ = 1;
+          rightBoundCase_ = 1;
           return this;
         }
         /**
@@ -6314,15 +6314,15 @@ java.lang.String defaultValue);
          */
         public Builder clearMaxValue() {
           if (maxValueBuilder_ == null) {
-            if (contentCase_ == 1) {
-              contentCase_ = 0;
-              content_ = null;
+            if (rightBoundCase_ == 1) {
+              rightBoundCase_ = 0;
+              rightBound_ = null;
               onChanged();
             }
           } else {
-            if (contentCase_ == 1) {
-              contentCase_ = 0;
-              content_ = null;
+            if (rightBoundCase_ == 1) {
+              rightBoundCase_ = 0;
+              rightBound_ = null;
             }
             maxValueBuilder_.clear();
           }
@@ -6339,11 +6339,11 @@ java.lang.String defaultValue);
          */
         @java.lang.Override
         public io.greptime.v1.Ddl.PartitionsDef.MaxValueOrBuilder getMaxValueOrBuilder() {
-          if ((contentCase_ == 1) && (maxValueBuilder_ != null)) {
+          if ((rightBoundCase_ == 1) && (maxValueBuilder_ != null)) {
             return maxValueBuilder_.getMessageOrBuilder();
           } else {
-            if (contentCase_ == 1) {
-              return (io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_;
+            if (rightBoundCase_ == 1) {
+              return (io.greptime.v1.Ddl.PartitionsDef.MaxValue) rightBound_;
             }
             return io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance();
           }
@@ -6355,17 +6355,17 @@ java.lang.String defaultValue);
             io.greptime.v1.Ddl.PartitionsDef.MaxValue, io.greptime.v1.Ddl.PartitionsDef.MaxValue.Builder, io.greptime.v1.Ddl.PartitionsDef.MaxValueOrBuilder> 
             getMaxValueFieldBuilder() {
           if (maxValueBuilder_ == null) {
-            if (!(contentCase_ == 1)) {
-              content_ = io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance();
+            if (!(rightBoundCase_ == 1)) {
+              rightBound_ = io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance();
             }
             maxValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
                 io.greptime.v1.Ddl.PartitionsDef.MaxValue, io.greptime.v1.Ddl.PartitionsDef.MaxValue.Builder, io.greptime.v1.Ddl.PartitionsDef.MaxValueOrBuilder>(
-                    (io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_,
+                    (io.greptime.v1.Ddl.PartitionsDef.MaxValue) rightBound_,
                     getParentForChildren(),
                     isClean());
-            content_ = null;
+            rightBound_ = null;
           }
-          contentCase_ = 1;
+          rightBoundCase_ = 1;
           onChanged();;
           return maxValueBuilder_;
         }
@@ -6378,7 +6378,7 @@ java.lang.String defaultValue);
          */
         @java.lang.Override
         public boolean hasValue() {
-          return contentCase_ == 2;
+          return rightBoundCase_ == 2;
         }
         /**
          * <code>.greptime.v1.Value value = 2;</code>
@@ -6387,12 +6387,12 @@ java.lang.String defaultValue);
         @java.lang.Override
         public io.greptime.v1.RowData.Value getValue() {
           if (valueBuilder_ == null) {
-            if (contentCase_ == 2) {
-              return (io.greptime.v1.RowData.Value) content_;
+            if (rightBoundCase_ == 2) {
+              return (io.greptime.v1.RowData.Value) rightBound_;
             }
             return io.greptime.v1.RowData.Value.getDefaultInstance();
           } else {
-            if (contentCase_ == 2) {
+            if (rightBoundCase_ == 2) {
               return valueBuilder_.getMessage();
             }
             return io.greptime.v1.RowData.Value.getDefaultInstance();
@@ -6406,12 +6406,12 @@ java.lang.String defaultValue);
             if (value == null) {
               throw new NullPointerException();
             }
-            content_ = value;
+            rightBound_ = value;
             onChanged();
           } else {
             valueBuilder_.setMessage(value);
           }
-          contentCase_ = 2;
+          rightBoundCase_ = 2;
           return this;
         }
         /**
@@ -6420,12 +6420,12 @@ java.lang.String defaultValue);
         public Builder setValue(
             io.greptime.v1.RowData.Value.Builder builderForValue) {
           if (valueBuilder_ == null) {
-            content_ = builderForValue.build();
+            rightBound_ = builderForValue.build();
             onChanged();
           } else {
             valueBuilder_.setMessage(builderForValue.build());
           }
-          contentCase_ = 2;
+          rightBoundCase_ = 2;
           return this;
         }
         /**
@@ -6433,22 +6433,22 @@ java.lang.String defaultValue);
          */
         public Builder mergeValue(io.greptime.v1.RowData.Value value) {
           if (valueBuilder_ == null) {
-            if (contentCase_ == 2 &&
-                content_ != io.greptime.v1.RowData.Value.getDefaultInstance()) {
-              content_ = io.greptime.v1.RowData.Value.newBuilder((io.greptime.v1.RowData.Value) content_)
+            if (rightBoundCase_ == 2 &&
+                rightBound_ != io.greptime.v1.RowData.Value.getDefaultInstance()) {
+              rightBound_ = io.greptime.v1.RowData.Value.newBuilder((io.greptime.v1.RowData.Value) rightBound_)
                   .mergeFrom(value).buildPartial();
             } else {
-              content_ = value;
+              rightBound_ = value;
             }
             onChanged();
           } else {
-            if (contentCase_ == 2) {
+            if (rightBoundCase_ == 2) {
               valueBuilder_.mergeFrom(value);
             } else {
               valueBuilder_.setMessage(value);
             }
           }
-          contentCase_ = 2;
+          rightBoundCase_ = 2;
           return this;
         }
         /**
@@ -6456,15 +6456,15 @@ java.lang.String defaultValue);
          */
         public Builder clearValue() {
           if (valueBuilder_ == null) {
-            if (contentCase_ == 2) {
-              contentCase_ = 0;
-              content_ = null;
+            if (rightBoundCase_ == 2) {
+              rightBoundCase_ = 0;
+              rightBound_ = null;
               onChanged();
             }
           } else {
-            if (contentCase_ == 2) {
-              contentCase_ = 0;
-              content_ = null;
+            if (rightBoundCase_ == 2) {
+              rightBoundCase_ = 0;
+              rightBound_ = null;
             }
             valueBuilder_.clear();
           }
@@ -6481,11 +6481,11 @@ java.lang.String defaultValue);
          */
         @java.lang.Override
         public io.greptime.v1.RowData.ValueOrBuilder getValueOrBuilder() {
-          if ((contentCase_ == 2) && (valueBuilder_ != null)) {
+          if ((rightBoundCase_ == 2) && (valueBuilder_ != null)) {
             return valueBuilder_.getMessageOrBuilder();
           } else {
-            if (contentCase_ == 2) {
-              return (io.greptime.v1.RowData.Value) content_;
+            if (rightBoundCase_ == 2) {
+              return (io.greptime.v1.RowData.Value) rightBound_;
             }
             return io.greptime.v1.RowData.Value.getDefaultInstance();
           }
@@ -6497,17 +6497,17 @@ java.lang.String defaultValue);
             io.greptime.v1.RowData.Value, io.greptime.v1.RowData.Value.Builder, io.greptime.v1.RowData.ValueOrBuilder> 
             getValueFieldBuilder() {
           if (valueBuilder_ == null) {
-            if (!(contentCase_ == 2)) {
-              content_ = io.greptime.v1.RowData.Value.getDefaultInstance();
+            if (!(rightBoundCase_ == 2)) {
+              rightBound_ = io.greptime.v1.RowData.Value.getDefaultInstance();
             }
             valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
                 io.greptime.v1.RowData.Value, io.greptime.v1.RowData.Value.Builder, io.greptime.v1.RowData.ValueOrBuilder>(
-                    (io.greptime.v1.RowData.Value) content_,
+                    (io.greptime.v1.RowData.Value) rightBound_,
                     getParentForChildren(),
                     isClean());
-            content_ = null;
+            rightBound_ = null;
           }
-          contentCase_ = 2;
+          rightBoundCase_ = 2;
           onChanged();;
           return valueBuilder_;
         }
@@ -20261,52 +20261,52 @@ java.lang.String defaultValue);
       "leId\022\026\n\016region_numbers\030\013 \003(\r\022\016\n\006engine\030\014" +
       " \001(\t\0222\n\016partitions_def\030\r \001(\0132\032.greptime." +
       "v1.PartitionsDef\0323\n\021TableOptionsEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\277\002\n\rPartit" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\303\002\n\rPartit" +
       "ionsDef\022\024\n\014column_names\030\001 \003(\t\022?\n\016partiti" +
       "on_defs\030\002 \003(\0132\'.greptime.v1.PartitionsDe" +
-      "f.PartitionDef\032\n\n\010MaxValue\032t\n\010ValueDef\0228" +
+      "f.PartitionDef\032\n\n\010MaxValue\032x\n\010ValueDef\0228" +
       "\n\tmax_value\030\001 \001(\0132#.greptime.v1.Partitio" +
       "nsDef.MaxValueH\000\022#\n\005value\030\002 \001(\0132\022.grepti" +
-      "me.v1.ValueH\000B\t\n\007content\032U\n\014PartitionDef" +
-      "\022\014\n\004name\030\001 \001(\t\0227\n\nvalue_defs\030\002 \003(\0132#.gre" +
-      "ptime.v1.PartitionsDef.ValueDef\"\245\002\n\tAlte" +
-      "rExpr\022\024\n\014catalog_name\030\001 \001(\t\022\023\n\013schema_na" +
-      "me\030\002 \001(\t\022\022\n\ntable_name\030\003 \001(\t\022.\n\013add_colu" +
-      "mns\030\004 \001(\0132\027.greptime.v1.AddColumnsH\000\0220\n\014" +
-      "drop_columns\030\005 \001(\0132\030.greptime.v1.DropCol" +
-      "umnsH\000\0220\n\014rename_table\030\006 \001(\0132\030.greptime." +
-      "v1.RenameTableH\000\022&\n\010table_id\030\007 \001(\0132\024.gre" +
-      "ptime.v1.TableId\022\025\n\rtable_version\030\010 \001(\004B" +
-      "\006\n\004kind\"v\n\rDropTableExpr\022\024\n\014catalog_name" +
-      "\030\001 \001(\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntable_nam" +
-      "e\030\003 \001(\t\022&\n\010table_id\030\004 \001(\0132\024.greptime.v1." +
-      "TableId\"\245\001\n\016FlushTableExpr\022\024\n\014catalog_na" +
-      "me\030\001 \001(\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntable_n" +
-      "ame\030\003 \001(\t\022\032\n\rregion_number\030\004 \001(\rH\000\210\001\001\022&\n" +
-      "\010table_id\030\005 \001(\0132\024.greptime.v1.TableIdB\020\n" +
-      "\016_region_number\"\177\n\020CompactTableExpr\022\024\n\014c" +
-      "atalog_name\030\001 \001(\t\022\023\n\013schema_name\030\002 \001(\t\022\022" +
-      "\n\ntable_name\030\003 \001(\t\022\032\n\rregion_number\030\004 \001(" +
-      "\rH\000\210\001\001B\020\n\016_region_number\"I\n\022CreateDataba" +
-      "seExpr\022\025\n\rdatabase_name\030\001 \001(\t\022\034\n\024create_" +
-      "if_not_exists\030\002 \001(\010\"z\n\021TruncateTableExpr" +
-      "\022\024\n\014catalog_name\030\001 \001(\t\022\023\n\013schema_name\030\002 " +
-      "\001(\t\022\022\n\ntable_name\030\003 \001(\t\022&\n\010table_id\030\004 \001(" +
-      "\0132\024.greptime.v1.TableId\"9\n\nAddColumns\022+\n" +
-      "\013add_columns\030\001 \003(\0132\026.greptime.v1.AddColu" +
-      "mn\"<\n\013DropColumns\022-\n\014drop_columns\030\001 \003(\0132" +
-      "\027.greptime.v1.DropColumn\"%\n\013RenameTable\022" +
-      "\026\n\016new_table_name\030\001 \001(\t\"\215\002\n\tAddColumn\022*\n" +
-      "\ncolumn_def\030\001 \001(\0132\026.greptime.v1.ColumnDe" +
-      "f\022\016\n\006is_key\030\002 \001(\010\0221\n\010location\030\003 \001(\0132\037.gr" +
-      "eptime.v1.AddColumn.Location\032\220\001\n\010Locatio" +
-      "n\022C\n\rlocation_type\030\001 \001(\0162,.greptime.v1.A" +
-      "ddColumn.Location.LocationType\022\031\n\021after_" +
-      "cloumn_name\030\002 \001(\t\"$\n\014LocationType\022\t\n\005FIR" +
-      "ST\020\000\022\t\n\005AFTER\020\001\"\032\n\nDropColumn\022\014\n\004name\030\001 " +
-      "\001(\t\"\025\n\007TableId\022\n\n\002id\030\001 \001(\rBL\n\016io.greptim" +
-      "e.v1B\003DdlZ5github.com/GreptimeTeam/grept" +
-      "ime-proto/go/greptime/v1b\006proto3"
+      "me.v1.ValueH\000B\r\n\013right_bound\032U\n\014Partitio" +
+      "nDef\022\014\n\004name\030\001 \001(\t\0227\n\nvalue_defs\030\002 \003(\0132#" +
+      ".greptime.v1.PartitionsDef.ValueDef\"\245\002\n\t" +
+      "AlterExpr\022\024\n\014catalog_name\030\001 \001(\t\022\023\n\013schem" +
+      "a_name\030\002 \001(\t\022\022\n\ntable_name\030\003 \001(\t\022.\n\013add_" +
+      "columns\030\004 \001(\0132\027.greptime.v1.AddColumnsH\000" +
+      "\0220\n\014drop_columns\030\005 \001(\0132\030.greptime.v1.Dro" +
+      "pColumnsH\000\0220\n\014rename_table\030\006 \001(\0132\030.grept" +
+      "ime.v1.RenameTableH\000\022&\n\010table_id\030\007 \001(\0132\024" +
+      ".greptime.v1.TableId\022\025\n\rtable_version\030\010 " +
+      "\001(\004B\006\n\004kind\"v\n\rDropTableExpr\022\024\n\014catalog_" +
+      "name\030\001 \001(\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntable" +
+      "_name\030\003 \001(\t\022&\n\010table_id\030\004 \001(\0132\024.greptime" +
+      ".v1.TableId\"\245\001\n\016FlushTableExpr\022\024\n\014catalo" +
+      "g_name\030\001 \001(\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntab" +
+      "le_name\030\003 \001(\t\022\032\n\rregion_number\030\004 \001(\rH\000\210\001" +
+      "\001\022&\n\010table_id\030\005 \001(\0132\024.greptime.v1.TableI" +
+      "dB\020\n\016_region_number\"\177\n\020CompactTableExpr\022" +
+      "\024\n\014catalog_name\030\001 \001(\t\022\023\n\013schema_name\030\002 \001" +
+      "(\t\022\022\n\ntable_name\030\003 \001(\t\022\032\n\rregion_number\030" +
+      "\004 \001(\rH\000\210\001\001B\020\n\016_region_number\"I\n\022CreateDa" +
+      "tabaseExpr\022\025\n\rdatabase_name\030\001 \001(\t\022\034\n\024cre" +
+      "ate_if_not_exists\030\002 \001(\010\"z\n\021TruncateTable" +
+      "Expr\022\024\n\014catalog_name\030\001 \001(\t\022\023\n\013schema_nam" +
+      "e\030\002 \001(\t\022\022\n\ntable_name\030\003 \001(\t\022&\n\010table_id\030" +
+      "\004 \001(\0132\024.greptime.v1.TableId\"9\n\nAddColumn" +
+      "s\022+\n\013add_columns\030\001 \003(\0132\026.greptime.v1.Add" +
+      "Column\"<\n\013DropColumns\022-\n\014drop_columns\030\001 " +
+      "\003(\0132\027.greptime.v1.DropColumn\"%\n\013RenameTa" +
+      "ble\022\026\n\016new_table_name\030\001 \001(\t\"\215\002\n\tAddColum" +
+      "n\022*\n\ncolumn_def\030\001 \001(\0132\026.greptime.v1.Colu" +
+      "mnDef\022\016\n\006is_key\030\002 \001(\010\0221\n\010location\030\003 \001(\0132" +
+      "\037.greptime.v1.AddColumn.Location\032\220\001\n\010Loc" +
+      "ation\022C\n\rlocation_type\030\001 \001(\0162,.greptime." +
+      "v1.AddColumn.Location.LocationType\022\031\n\021af" +
+      "ter_cloumn_name\030\002 \001(\t\"$\n\014LocationType\022\t\n" +
+      "\005FIRST\020\000\022\t\n\005AFTER\020\001\"\032\n\nDropColumn\022\014\n\004nam" +
+      "e\030\001 \001(\t\"\025\n\007TableId\022\n\n\002id\030\001 \001(\rBL\n\016io.gre" +
+      "ptime.v1B\003DdlZ5github.com/GreptimeTeam/g" +
+      "reptime-proto/go/greptime/v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20349,7 +20349,7 @@ java.lang.String defaultValue);
     internal_static_greptime_v1_PartitionsDef_ValueDef_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_greptime_v1_PartitionsDef_ValueDef_descriptor,
-        new java.lang.String[] { "MaxValue", "Value", "Content", });
+        new java.lang.String[] { "MaxValue", "Value", "RightBound", });
     internal_static_greptime_v1_PartitionsDef_PartitionDef_descriptor =
       internal_static_greptime_v1_PartitionsDef_descriptor.getNestedTypes().get(2);
     internal_static_greptime_v1_PartitionsDef_PartitionDef_fieldAccessorTable = new

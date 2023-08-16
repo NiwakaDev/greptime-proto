@@ -1043,10 +1043,10 @@ class PartitionsDef_ValueDef final :
   static const PartitionsDef_ValueDef& default_instance() {
     return *internal_default_instance();
   }
-  enum ContentCase {
+  enum RightBoundCase {
     kMaxValue = 1,
     kValue = 2,
-    CONTENT_NOT_SET = 0,
+    RIGHT_BOUND_NOT_SET = 0,
   };
 
   static inline const PartitionsDef_ValueDef* internal_default_instance() {
@@ -1166,27 +1166,27 @@ class PartitionsDef_ValueDef final :
       ::greptime::v1::Value* value);
   ::greptime::v1::Value* unsafe_arena_release_value();
 
-  void clear_content();
-  ContentCase content_case() const;
+  void clear_right_bound();
+  RightBoundCase right_bound_case() const;
   // @@protoc_insertion_point(class_scope:greptime.v1.PartitionsDef.ValueDef)
  private:
   class _Internal;
   void set_has_max_value();
   void set_has_value();
 
-  inline bool has_content() const;
-  inline void clear_has_content();
+  inline bool has_right_bound() const;
+  inline void clear_has_right_bound();
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    union ContentUnion {
-      constexpr ContentUnion() : _constinit_{} {}
+    union RightBoundUnion {
+      constexpr RightBoundUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
       ::greptime::v1::PartitionsDef_MaxValue* max_value_;
       ::greptime::v1::Value* value_;
-    } content_;
+    } right_bound_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
 
@@ -5241,7 +5241,7 @@ inline void CreateTableExpr::set_allocated_partitions_def(::greptime::v1::Partit
 
 // .greptime.v1.PartitionsDef.MaxValue max_value = 1;
 inline bool PartitionsDef_ValueDef::_internal_has_max_value() const {
-  return content_case() == kMaxValue;
+  return right_bound_case() == kMaxValue;
 }
 inline bool PartitionsDef_ValueDef::has_max_value() const {
   return _internal_has_max_value();
@@ -5252,20 +5252,20 @@ inline void PartitionsDef_ValueDef::set_has_max_value() {
 inline void PartitionsDef_ValueDef::clear_max_value() {
   if (_internal_has_max_value()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.max_value_;
+      delete _impl_.right_bound_.max_value_;
     }
-    clear_has_content();
+    clear_has_right_bound();
   }
 }
 inline ::greptime::v1::PartitionsDef_MaxValue* PartitionsDef_ValueDef::release_max_value() {
   // @@protoc_insertion_point(field_release:greptime.v1.PartitionsDef.ValueDef.max_value)
   if (_internal_has_max_value()) {
-    clear_has_content();
-    ::greptime::v1::PartitionsDef_MaxValue* temp = _impl_.content_.max_value_;
+    clear_has_right_bound();
+    ::greptime::v1::PartitionsDef_MaxValue* temp = _impl_.right_bound_.max_value_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.max_value_ = nullptr;
+    _impl_.right_bound_.max_value_ = nullptr;
     return temp;
   } else {
     return nullptr;
@@ -5273,7 +5273,7 @@ inline ::greptime::v1::PartitionsDef_MaxValue* PartitionsDef_ValueDef::release_m
 }
 inline const ::greptime::v1::PartitionsDef_MaxValue& PartitionsDef_ValueDef::_internal_max_value() const {
   return _internal_has_max_value()
-      ? *_impl_.content_.max_value_
+      ? *_impl_.right_bound_.max_value_
       : reinterpret_cast< ::greptime::v1::PartitionsDef_MaxValue&>(::greptime::v1::_PartitionsDef_MaxValue_default_instance_);
 }
 inline const ::greptime::v1::PartitionsDef_MaxValue& PartitionsDef_ValueDef::max_value() const {
@@ -5283,29 +5283,29 @@ inline const ::greptime::v1::PartitionsDef_MaxValue& PartitionsDef_ValueDef::max
 inline ::greptime::v1::PartitionsDef_MaxValue* PartitionsDef_ValueDef::unsafe_arena_release_max_value() {
   // @@protoc_insertion_point(field_unsafe_arena_release:greptime.v1.PartitionsDef.ValueDef.max_value)
   if (_internal_has_max_value()) {
-    clear_has_content();
-    ::greptime::v1::PartitionsDef_MaxValue* temp = _impl_.content_.max_value_;
-    _impl_.content_.max_value_ = nullptr;
+    clear_has_right_bound();
+    ::greptime::v1::PartitionsDef_MaxValue* temp = _impl_.right_bound_.max_value_;
+    _impl_.right_bound_.max_value_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
 inline void PartitionsDef_ValueDef::unsafe_arena_set_allocated_max_value(::greptime::v1::PartitionsDef_MaxValue* max_value) {
-  clear_content();
+  clear_right_bound();
   if (max_value) {
     set_has_max_value();
-    _impl_.content_.max_value_ = max_value;
+    _impl_.right_bound_.max_value_ = max_value;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:greptime.v1.PartitionsDef.ValueDef.max_value)
 }
 inline ::greptime::v1::PartitionsDef_MaxValue* PartitionsDef_ValueDef::_internal_mutable_max_value() {
   if (!_internal_has_max_value()) {
-    clear_content();
+    clear_right_bound();
     set_has_max_value();
-    _impl_.content_.max_value_ = CreateMaybeMessage< ::greptime::v1::PartitionsDef_MaxValue >(GetArenaForAllocation());
+    _impl_.right_bound_.max_value_ = CreateMaybeMessage< ::greptime::v1::PartitionsDef_MaxValue >(GetArenaForAllocation());
   }
-  return _impl_.content_.max_value_;
+  return _impl_.right_bound_.max_value_;
 }
 inline ::greptime::v1::PartitionsDef_MaxValue* PartitionsDef_ValueDef::mutable_max_value() {
   ::greptime::v1::PartitionsDef_MaxValue* _msg = _internal_mutable_max_value();
@@ -5315,7 +5315,7 @@ inline ::greptime::v1::PartitionsDef_MaxValue* PartitionsDef_ValueDef::mutable_m
 
 // .greptime.v1.Value value = 2;
 inline bool PartitionsDef_ValueDef::_internal_has_value() const {
-  return content_case() == kValue;
+  return right_bound_case() == kValue;
 }
 inline bool PartitionsDef_ValueDef::has_value() const {
   return _internal_has_value();
@@ -5326,12 +5326,12 @@ inline void PartitionsDef_ValueDef::set_has_value() {
 inline ::greptime::v1::Value* PartitionsDef_ValueDef::release_value() {
   // @@protoc_insertion_point(field_release:greptime.v1.PartitionsDef.ValueDef.value)
   if (_internal_has_value()) {
-    clear_has_content();
-    ::greptime::v1::Value* temp = _impl_.content_.value_;
+    clear_has_right_bound();
+    ::greptime::v1::Value* temp = _impl_.right_bound_.value_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.value_ = nullptr;
+    _impl_.right_bound_.value_ = nullptr;
     return temp;
   } else {
     return nullptr;
@@ -5339,7 +5339,7 @@ inline ::greptime::v1::Value* PartitionsDef_ValueDef::release_value() {
 }
 inline const ::greptime::v1::Value& PartitionsDef_ValueDef::_internal_value() const {
   return _internal_has_value()
-      ? *_impl_.content_.value_
+      ? *_impl_.right_bound_.value_
       : reinterpret_cast< ::greptime::v1::Value&>(::greptime::v1::_Value_default_instance_);
 }
 inline const ::greptime::v1::Value& PartitionsDef_ValueDef::value() const {
@@ -5349,29 +5349,29 @@ inline const ::greptime::v1::Value& PartitionsDef_ValueDef::value() const {
 inline ::greptime::v1::Value* PartitionsDef_ValueDef::unsafe_arena_release_value() {
   // @@protoc_insertion_point(field_unsafe_arena_release:greptime.v1.PartitionsDef.ValueDef.value)
   if (_internal_has_value()) {
-    clear_has_content();
-    ::greptime::v1::Value* temp = _impl_.content_.value_;
-    _impl_.content_.value_ = nullptr;
+    clear_has_right_bound();
+    ::greptime::v1::Value* temp = _impl_.right_bound_.value_;
+    _impl_.right_bound_.value_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
 inline void PartitionsDef_ValueDef::unsafe_arena_set_allocated_value(::greptime::v1::Value* value) {
-  clear_content();
+  clear_right_bound();
   if (value) {
     set_has_value();
-    _impl_.content_.value_ = value;
+    _impl_.right_bound_.value_ = value;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:greptime.v1.PartitionsDef.ValueDef.value)
 }
 inline ::greptime::v1::Value* PartitionsDef_ValueDef::_internal_mutable_value() {
   if (!_internal_has_value()) {
-    clear_content();
+    clear_right_bound();
     set_has_value();
-    _impl_.content_.value_ = CreateMaybeMessage< ::greptime::v1::Value >(GetArenaForAllocation());
+    _impl_.right_bound_.value_ = CreateMaybeMessage< ::greptime::v1::Value >(GetArenaForAllocation());
   }
-  return _impl_.content_.value_;
+  return _impl_.right_bound_.value_;
 }
 inline ::greptime::v1::Value* PartitionsDef_ValueDef::mutable_value() {
   ::greptime::v1::Value* _msg = _internal_mutable_value();
@@ -5379,14 +5379,14 @@ inline ::greptime::v1::Value* PartitionsDef_ValueDef::mutable_value() {
   return _msg;
 }
 
-inline bool PartitionsDef_ValueDef::has_content() const {
-  return content_case() != CONTENT_NOT_SET;
+inline bool PartitionsDef_ValueDef::has_right_bound() const {
+  return right_bound_case() != RIGHT_BOUND_NOT_SET;
 }
-inline void PartitionsDef_ValueDef::clear_has_content() {
-  _impl_._oneof_case_[0] = CONTENT_NOT_SET;
+inline void PartitionsDef_ValueDef::clear_has_right_bound() {
+  _impl_._oneof_case_[0] = RIGHT_BOUND_NOT_SET;
 }
-inline PartitionsDef_ValueDef::ContentCase PartitionsDef_ValueDef::content_case() const {
-  return PartitionsDef_ValueDef::ContentCase(_impl_._oneof_case_[0]);
+inline PartitionsDef_ValueDef::RightBoundCase PartitionsDef_ValueDef::right_bound_case() const {
+  return PartitionsDef_ValueDef::RightBoundCase(_impl_._oneof_case_[0]);
 }
 // -------------------------------------------------------------------
 
