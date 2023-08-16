@@ -21,6 +21,7 @@ option java_outer_classname = "Ddl";
 option go_package = "github.com/GreptimeTeam/greptime-proto/go/greptime/v1";
 
 import "greptime/v1/common.proto";
+import "greptime/v1/row.proto";
 
 // "Data Definition Language" requests, that create, modify or delete the
 // database structures but not the data. `DdlRequest` could carry more
@@ -54,18 +55,14 @@ message CreateTableExpr {
   PartitionsDef partitions_def = 13;
 }
 
-message PartitionsDef {
+message PartitionsDef {  
   message MaxValue {
-    int32 unused = 1;
+
   }
   message ValueDef {
-    oneof value {
+    oneof content {
       MaxValue max_value = 1;
-      int32 int32_value = 2;
-      float float32_value = 3;
-      double float64_value = 4;
-      string string_value = 5;
-      bool bool_value = 6;
+      Value value = 2;
     }
   }
   message PartitionDef {

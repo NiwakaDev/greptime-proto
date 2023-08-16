@@ -74,9 +74,7 @@ struct CreateTableExprDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CreateTableExprDefaultTypeInternal _CreateTableExpr_default_instance_;
 PROTOBUF_CONSTEXPR PartitionsDef_MaxValue::PartitionsDef_MaxValue(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.unused_)*/0
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct PartitionsDef_MaxValueDefaultTypeInternal {
   PROTOBUF_CONSTEXPR PartitionsDef_MaxValueDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -88,7 +86,7 @@ struct PartitionsDef_MaxValueDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PartitionsDef_MaxValueDefaultTypeInternal _PartitionsDef_MaxValue_default_instance_;
 PROTOBUF_CONSTEXPR PartitionsDef_ValueDef::PartitionsDef_ValueDef(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.value_)*/{}
+    /*decltype(_impl_.content_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_._oneof_case_)*/{}} {}
 struct PartitionsDef_ValueDefDefaultTypeInternal {
@@ -378,7 +376,6 @@ const uint32_t TableStruct_greptime_2fv1_2fddl_2eproto::offsets[] PROTOBUF_SECTI
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::greptime::v1::PartitionsDef_MaxValue, _impl_.unused_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::greptime::v1::PartitionsDef_ValueDef, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -387,11 +384,7 @@ const uint32_t TableStruct_greptime_2fv1_2fddl_2eproto::offsets[] PROTOBUF_SECTI
   ~0u,  // no _inlined_string_donated_
   ::_pbi::kInvalidFieldOffsetTag,
   ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::greptime::v1::PartitionsDef_ValueDef, _impl_.value_),
+  PROTOBUF_FIELD_OFFSET(::greptime::v1::PartitionsDef_ValueDef, _impl_.content_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::greptime::v1::PartitionsDef_PartitionDef, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -539,22 +532,22 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 14, 22, -1, sizeof(::greptime::v1::CreateTableExpr_TableOptionsEntry_DoNotUse)},
   { 24, -1, -1, sizeof(::greptime::v1::CreateTableExpr)},
   { 43, -1, -1, sizeof(::greptime::v1::PartitionsDef_MaxValue)},
-  { 50, -1, -1, sizeof(::greptime::v1::PartitionsDef_ValueDef)},
-  { 63, -1, -1, sizeof(::greptime::v1::PartitionsDef_PartitionDef)},
-  { 71, -1, -1, sizeof(::greptime::v1::PartitionsDef)},
-  { 79, -1, -1, sizeof(::greptime::v1::AlterExpr)},
-  { 94, -1, -1, sizeof(::greptime::v1::DropTableExpr)},
-  { 104, 115, -1, sizeof(::greptime::v1::FlushTableExpr)},
-  { 120, 130, -1, sizeof(::greptime::v1::CompactTableExpr)},
-  { 134, -1, -1, sizeof(::greptime::v1::CreateDatabaseExpr)},
-  { 142, -1, -1, sizeof(::greptime::v1::TruncateTableExpr)},
-  { 152, -1, -1, sizeof(::greptime::v1::AddColumns)},
-  { 159, -1, -1, sizeof(::greptime::v1::DropColumns)},
-  { 166, -1, -1, sizeof(::greptime::v1::RenameTable)},
-  { 173, -1, -1, sizeof(::greptime::v1::AddColumn_Location)},
-  { 181, -1, -1, sizeof(::greptime::v1::AddColumn)},
-  { 190, -1, -1, sizeof(::greptime::v1::DropColumn)},
-  { 197, -1, -1, sizeof(::greptime::v1::TableId)},
+  { 49, -1, -1, sizeof(::greptime::v1::PartitionsDef_ValueDef)},
+  { 58, -1, -1, sizeof(::greptime::v1::PartitionsDef_PartitionDef)},
+  { 66, -1, -1, sizeof(::greptime::v1::PartitionsDef)},
+  { 74, -1, -1, sizeof(::greptime::v1::AlterExpr)},
+  { 89, -1, -1, sizeof(::greptime::v1::DropTableExpr)},
+  { 99, 110, -1, sizeof(::greptime::v1::FlushTableExpr)},
+  { 115, 125, -1, sizeof(::greptime::v1::CompactTableExpr)},
+  { 129, -1, -1, sizeof(::greptime::v1::CreateDatabaseExpr)},
+  { 137, -1, -1, sizeof(::greptime::v1::TruncateTableExpr)},
+  { 147, -1, -1, sizeof(::greptime::v1::AddColumns)},
+  { 154, -1, -1, sizeof(::greptime::v1::DropColumns)},
+  { 161, -1, -1, sizeof(::greptime::v1::RenameTable)},
+  { 168, -1, -1, sizeof(::greptime::v1::AddColumn_Location)},
+  { 176, -1, -1, sizeof(::greptime::v1::AddColumn)},
+  { 185, -1, -1, sizeof(::greptime::v1::DropColumn)},
+  { 192, -1, -1, sizeof(::greptime::v1::TableId)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -582,85 +575,84 @@ static const ::_pb::Message* const file_default_instances[] = {
 
 const char descriptor_table_protodef_greptime_2fv1_2fddl_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\025greptime/v1/ddl.proto\022\013greptime.v1\032\030gr"
-  "eptime/v1/common.proto\"\207\003\n\nDdlRequest\022:\n"
-  "\017create_database\030\001 \001(\0132\037.greptime.v1.Cre"
-  "ateDatabaseExprH\000\0224\n\014create_table\030\002 \001(\0132"
-  "\034.greptime.v1.CreateTableExprH\000\022\'\n\005alter"
-  "\030\003 \001(\0132\026.greptime.v1.AlterExprH\000\0220\n\ndrop"
-  "_table\030\004 \001(\0132\032.greptime.v1.DropTableExpr"
-  "H\000\0222\n\013flush_table\030\005 \001(\0132\033.greptime.v1.Fl"
-  "ushTableExprH\000\0226\n\rcompact_table\030\006 \001(\0132\035."
-  "greptime.v1.CompactTableExprH\000\0228\n\016trunca"
-  "te_table\030\007 \001(\0132\036.greptime.v1.TruncateTab"
-  "leExprH\000B\006\n\004expr\"\323\003\n\017CreateTableExpr\022\024\n\014"
-  "catalog_name\030\001 \001(\t\022\023\n\013schema_name\030\002 \001(\t\022"
-  "\022\n\ntable_name\030\003 \001(\t\022\014\n\004desc\030\004 \001(\t\022+\n\013col"
-  "umn_defs\030\005 \003(\0132\026.greptime.v1.ColumnDef\022\022"
-  "\n\ntime_index\030\006 \001(\t\022\024\n\014primary_keys\030\007 \003(\t"
-  "\022\034\n\024create_if_not_exists\030\010 \001(\010\022E\n\rtable_"
-  "options\030\t \003(\0132..greptime.v1.CreateTableE"
-  "xpr.TableOptionsEntry\022&\n\010table_id\030\n \001(\0132"
-  "\024.greptime.v1.TableId\022\026\n\016region_numbers\030"
-  "\013 \003(\r\022\016\n\006engine\030\014 \001(\t\0222\n\016partitions_def\030"
-  "\r \001(\0132\032.greptime.v1.PartitionsDef\0323\n\021Tab"
-  "leOptionsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001"
-  "(\t:\0028\001\"\240\003\n\rPartitionsDef\022\024\n\014column_names"
-  "\030\001 \003(\t\022\?\n\016partition_defs\030\002 \003(\0132\'.greptim"
-  "e.v1.PartitionsDef.PartitionDef\032\032\n\010MaxVa"
-  "lue\022\016\n\006unused\030\001 \001(\005\032\304\001\n\010ValueDef\0228\n\tmax_"
-  "value\030\001 \001(\0132#.greptime.v1.PartitionsDef."
-  "MaxValueH\000\022\025\n\013int32_value\030\002 \001(\005H\000\022\027\n\rflo"
-  "at32_value\030\003 \001(\002H\000\022\027\n\rfloat64_value\030\004 \001("
-  "\001H\000\022\026\n\014string_value\030\005 \001(\tH\000\022\024\n\nbool_valu"
-  "e\030\006 \001(\010H\000B\007\n\005value\032U\n\014PartitionDef\022\014\n\004na"
-  "me\030\001 \001(\t\0227\n\nvalue_defs\030\002 \003(\0132#.greptime."
-  "v1.PartitionsDef.ValueDef\"\245\002\n\tAlterExpr\022"
-  "\024\n\014catalog_name\030\001 \001(\t\022\023\n\013schema_name\030\002 \001"
-  "(\t\022\022\n\ntable_name\030\003 \001(\t\022.\n\013add_columns\030\004 "
-  "\001(\0132\027.greptime.v1.AddColumnsH\000\0220\n\014drop_c"
-  "olumns\030\005 \001(\0132\030.greptime.v1.DropColumnsH\000"
-  "\0220\n\014rename_table\030\006 \001(\0132\030.greptime.v1.Ren"
-  "ameTableH\000\022&\n\010table_id\030\007 \001(\0132\024.greptime."
-  "v1.TableId\022\025\n\rtable_version\030\010 \001(\004B\006\n\004kin"
-  "d\"v\n\rDropTableExpr\022\024\n\014catalog_name\030\001 \001(\t"
-  "\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntable_name\030\003 \001("
-  "\t\022&\n\010table_id\030\004 \001(\0132\024.greptime.v1.TableI"
-  "d\"\245\001\n\016FlushTableExpr\022\024\n\014catalog_name\030\001 \001"
-  "(\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntable_name\030\003 "
-  "\001(\t\022\032\n\rregion_number\030\004 \001(\rH\000\210\001\001\022&\n\010table"
-  "_id\030\005 \001(\0132\024.greptime.v1.TableIdB\020\n\016_regi"
-  "on_number\"\177\n\020CompactTableExpr\022\024\n\014catalog"
-  "_name\030\001 \001(\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntabl"
-  "e_name\030\003 \001(\t\022\032\n\rregion_number\030\004 \001(\rH\000\210\001\001"
-  "B\020\n\016_region_number\"I\n\022CreateDatabaseExpr"
-  "\022\025\n\rdatabase_name\030\001 \001(\t\022\034\n\024create_if_not"
-  "_exists\030\002 \001(\010\"z\n\021TruncateTableExpr\022\024\n\014ca"
-  "talog_name\030\001 \001(\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n"
-  "\ntable_name\030\003 \001(\t\022&\n\010table_id\030\004 \001(\0132\024.gr"
-  "eptime.v1.TableId\"9\n\nAddColumns\022+\n\013add_c"
-  "olumns\030\001 \003(\0132\026.greptime.v1.AddColumn\"<\n\013"
-  "DropColumns\022-\n\014drop_columns\030\001 \003(\0132\027.grep"
-  "time.v1.DropColumn\"%\n\013RenameTable\022\026\n\016new"
-  "_table_name\030\001 \001(\t\"\215\002\n\tAddColumn\022*\n\ncolum"
-  "n_def\030\001 \001(\0132\026.greptime.v1.ColumnDef\022\016\n\006i"
-  "s_key\030\002 \001(\010\0221\n\010location\030\003 \001(\0132\037.greptime"
-  ".v1.AddColumn.Location\032\220\001\n\010Location\022C\n\rl"
-  "ocation_type\030\001 \001(\0162,.greptime.v1.AddColu"
-  "mn.Location.LocationType\022\031\n\021after_cloumn"
-  "_name\030\002 \001(\t\"$\n\014LocationType\022\t\n\005FIRST\020\000\022\t"
-  "\n\005AFTER\020\001\"\032\n\nDropColumn\022\014\n\004name\030\001 \001(\t\"\025\n"
-  "\007TableId\022\n\n\002id\030\001 \001(\rBL\n\016io.greptime.v1B\003"
-  "DdlZ5github.com/GreptimeTeam/greptime-pr"
-  "oto/go/greptime/v1b\006proto3"
+  "eptime/v1/common.proto\032\025greptime/v1/row."
+  "proto\"\207\003\n\nDdlRequest\022:\n\017create_database\030"
+  "\001 \001(\0132\037.greptime.v1.CreateDatabaseExprH\000"
+  "\0224\n\014create_table\030\002 \001(\0132\034.greptime.v1.Cre"
+  "ateTableExprH\000\022\'\n\005alter\030\003 \001(\0132\026.greptime"
+  ".v1.AlterExprH\000\0220\n\ndrop_table\030\004 \001(\0132\032.gr"
+  "eptime.v1.DropTableExprH\000\0222\n\013flush_table"
+  "\030\005 \001(\0132\033.greptime.v1.FlushTableExprH\000\0226\n"
+  "\rcompact_table\030\006 \001(\0132\035.greptime.v1.Compa"
+  "ctTableExprH\000\0228\n\016truncate_table\030\007 \001(\0132\036."
+  "greptime.v1.TruncateTableExprH\000B\006\n\004expr\""
+  "\323\003\n\017CreateTableExpr\022\024\n\014catalog_name\030\001 \001("
+  "\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntable_name\030\003 \001"
+  "(\t\022\014\n\004desc\030\004 \001(\t\022+\n\013column_defs\030\005 \003(\0132\026."
+  "greptime.v1.ColumnDef\022\022\n\ntime_index\030\006 \001("
+  "\t\022\024\n\014primary_keys\030\007 \003(\t\022\034\n\024create_if_not"
+  "_exists\030\010 \001(\010\022E\n\rtable_options\030\t \003(\0132..g"
+  "reptime.v1.CreateTableExpr.TableOptionsE"
+  "ntry\022&\n\010table_id\030\n \001(\0132\024.greptime.v1.Tab"
+  "leId\022\026\n\016region_numbers\030\013 \003(\r\022\016\n\006engine\030\014"
+  " \001(\t\0222\n\016partitions_def\030\r \001(\0132\032.greptime."
+  "v1.PartitionsDef\0323\n\021TableOptionsEntry\022\013\n"
+  "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\277\002\n\rPartit"
+  "ionsDef\022\024\n\014column_names\030\001 \003(\t\022\?\n\016partiti"
+  "on_defs\030\002 \003(\0132\'.greptime.v1.PartitionsDe"
+  "f.PartitionDef\032\n\n\010MaxValue\032t\n\010ValueDef\0228"
+  "\n\tmax_value\030\001 \001(\0132#.greptime.v1.Partitio"
+  "nsDef.MaxValueH\000\022#\n\005value\030\002 \001(\0132\022.grepti"
+  "me.v1.ValueH\000B\t\n\007content\032U\n\014PartitionDef"
+  "\022\014\n\004name\030\001 \001(\t\0227\n\nvalue_defs\030\002 \003(\0132#.gre"
+  "ptime.v1.PartitionsDef.ValueDef\"\245\002\n\tAlte"
+  "rExpr\022\024\n\014catalog_name\030\001 \001(\t\022\023\n\013schema_na"
+  "me\030\002 \001(\t\022\022\n\ntable_name\030\003 \001(\t\022.\n\013add_colu"
+  "mns\030\004 \001(\0132\027.greptime.v1.AddColumnsH\000\0220\n\014"
+  "drop_columns\030\005 \001(\0132\030.greptime.v1.DropCol"
+  "umnsH\000\0220\n\014rename_table\030\006 \001(\0132\030.greptime."
+  "v1.RenameTableH\000\022&\n\010table_id\030\007 \001(\0132\024.gre"
+  "ptime.v1.TableId\022\025\n\rtable_version\030\010 \001(\004B"
+  "\006\n\004kind\"v\n\rDropTableExpr\022\024\n\014catalog_name"
+  "\030\001 \001(\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntable_nam"
+  "e\030\003 \001(\t\022&\n\010table_id\030\004 \001(\0132\024.greptime.v1."
+  "TableId\"\245\001\n\016FlushTableExpr\022\024\n\014catalog_na"
+  "me\030\001 \001(\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntable_n"
+  "ame\030\003 \001(\t\022\032\n\rregion_number\030\004 \001(\rH\000\210\001\001\022&\n"
+  "\010table_id\030\005 \001(\0132\024.greptime.v1.TableIdB\020\n"
+  "\016_region_number\"\177\n\020CompactTableExpr\022\024\n\014c"
+  "atalog_name\030\001 \001(\t\022\023\n\013schema_name\030\002 \001(\t\022\022"
+  "\n\ntable_name\030\003 \001(\t\022\032\n\rregion_number\030\004 \001("
+  "\rH\000\210\001\001B\020\n\016_region_number\"I\n\022CreateDataba"
+  "seExpr\022\025\n\rdatabase_name\030\001 \001(\t\022\034\n\024create_"
+  "if_not_exists\030\002 \001(\010\"z\n\021TruncateTableExpr"
+  "\022\024\n\014catalog_name\030\001 \001(\t\022\023\n\013schema_name\030\002 "
+  "\001(\t\022\022\n\ntable_name\030\003 \001(\t\022&\n\010table_id\030\004 \001("
+  "\0132\024.greptime.v1.TableId\"9\n\nAddColumns\022+\n"
+  "\013add_columns\030\001 \003(\0132\026.greptime.v1.AddColu"
+  "mn\"<\n\013DropColumns\022-\n\014drop_columns\030\001 \003(\0132"
+  "\027.greptime.v1.DropColumn\"%\n\013RenameTable\022"
+  "\026\n\016new_table_name\030\001 \001(\t\"\215\002\n\tAddColumn\022*\n"
+  "\ncolumn_def\030\001 \001(\0132\026.greptime.v1.ColumnDe"
+  "f\022\016\n\006is_key\030\002 \001(\010\0221\n\010location\030\003 \001(\0132\037.gr"
+  "eptime.v1.AddColumn.Location\032\220\001\n\010Locatio"
+  "n\022C\n\rlocation_type\030\001 \001(\0162,.greptime.v1.A"
+  "ddColumn.Location.LocationType\022\031\n\021after_"
+  "cloumn_name\030\002 \001(\t\"$\n\014LocationType\022\t\n\005FIR"
+  "ST\020\000\022\t\n\005AFTER\020\001\"\032\n\nDropColumn\022\014\n\004name\030\001 "
+  "\001(\t\"\025\n\007TableId\022\n\n\002id\030\001 \001(\rBL\n\016io.greptim"
+  "e.v1B\003DdlZ5github.com/GreptimeTeam/grept"
+  "ime-proto/go/greptime/v1b\006proto3"
   ;
-static const ::_pbi::DescriptorTable* const descriptor_table_greptime_2fv1_2fddl_2eproto_deps[1] = {
+static const ::_pbi::DescriptorTable* const descriptor_table_greptime_2fv1_2fddl_2eproto_deps[2] = {
   &::descriptor_table_greptime_2fv1_2fcommon_2eproto,
+  &::descriptor_table_greptime_2fv1_2frow_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_greptime_2fv1_2fddl_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_greptime_2fv1_2fddl_2eproto = {
-    false, false, 2826, descriptor_table_protodef_greptime_2fv1_2fddl_2eproto,
+    false, false, 2752, descriptor_table_protodef_greptime_2fv1_2fddl_2eproto,
     "greptime/v1/ddl.proto",
-    &descriptor_table_greptime_2fv1_2fddl_2eproto_once, descriptor_table_greptime_2fv1_2fddl_2eproto_deps, 1, 20,
+    &descriptor_table_greptime_2fv1_2fddl_2eproto_once, descriptor_table_greptime_2fv1_2fddl_2eproto_deps, 2, 20,
     schemas, file_default_instances, TableStruct_greptime_2fv1_2fddl_2eproto::offsets,
     file_level_metadata_greptime_2fv1_2fddl_2eproto, file_level_enum_descriptors_greptime_2fv1_2fddl_2eproto,
     file_level_service_descriptors_greptime_2fv1_2fddl_2eproto,
@@ -2065,169 +2057,31 @@ class PartitionsDef_MaxValue::_Internal {
 
 PartitionsDef_MaxValue::PartitionsDef_MaxValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:greptime.v1.PartitionsDef.MaxValue)
 }
 PartitionsDef_MaxValue::PartitionsDef_MaxValue(const PartitionsDef_MaxValue& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   PartitionsDef_MaxValue* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.unused_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _this->_impl_.unused_ = from._impl_.unused_;
   // @@protoc_insertion_point(copy_constructor:greptime.v1.PartitionsDef.MaxValue)
 }
 
-inline void PartitionsDef_MaxValue::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.unused_){0}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
-}
 
-PartitionsDef_MaxValue::~PartitionsDef_MaxValue() {
-  // @@protoc_insertion_point(destructor:greptime.v1.PartitionsDef.MaxValue)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
 
-inline void PartitionsDef_MaxValue::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
 
-void PartitionsDef_MaxValue::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void PartitionsDef_MaxValue::Clear() {
-// @@protoc_insertion_point(message_clear_start:greptime.v1.PartitionsDef.MaxValue)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _impl_.unused_ = 0;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* PartitionsDef_MaxValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // int32 unused = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.unused_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      default:
-        goto handle_unusual;
-    }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* PartitionsDef_MaxValue::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:greptime.v1.PartitionsDef.MaxValue)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // int32 unused = 1;
-  if (this->_internal_unused() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_unused(), target);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:greptime.v1.PartitionsDef.MaxValue)
-  return target;
-}
-
-size_t PartitionsDef_MaxValue::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:greptime.v1.PartitionsDef.MaxValue)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // int32 unused = 1;
-  if (this->_internal_unused() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_unused());
-  }
-
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
-}
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PartitionsDef_MaxValue::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    PartitionsDef_MaxValue::MergeImpl
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PartitionsDef_MaxValue::GetClassData() const { return &_class_data_; }
 
 
-void PartitionsDef_MaxValue::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<PartitionsDef_MaxValue*>(&to_msg);
-  auto& from = static_cast<const PartitionsDef_MaxValue&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:greptime.v1.PartitionsDef.MaxValue)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
 
-  if (from._internal_unused() != 0) {
-    _this->_internal_set_unused(from._internal_unused());
-  }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-}
 
-void PartitionsDef_MaxValue::CopyFrom(const PartitionsDef_MaxValue& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:greptime.v1.PartitionsDef.MaxValue)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
 
-bool PartitionsDef_MaxValue::IsInitialized() const {
-  return true;
-}
 
-void PartitionsDef_MaxValue::InternalSwap(PartitionsDef_MaxValue* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_.unused_, other->_impl_.unused_);
-}
 
 ::PROTOBUF_NAMESPACE_ID::Metadata PartitionsDef_MaxValue::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
@@ -2240,15 +2094,20 @@ void PartitionsDef_MaxValue::InternalSwap(PartitionsDef_MaxValue* other) {
 class PartitionsDef_ValueDef::_Internal {
  public:
   static const ::greptime::v1::PartitionsDef_MaxValue& max_value(const PartitionsDef_ValueDef* msg);
+  static const ::greptime::v1::Value& value(const PartitionsDef_ValueDef* msg);
 };
 
 const ::greptime::v1::PartitionsDef_MaxValue&
 PartitionsDef_ValueDef::_Internal::max_value(const PartitionsDef_ValueDef* msg) {
-  return *msg->_impl_.value_.max_value_;
+  return *msg->_impl_.content_.max_value_;
+}
+const ::greptime::v1::Value&
+PartitionsDef_ValueDef::_Internal::value(const PartitionsDef_ValueDef* msg) {
+  return *msg->_impl_.content_.value_;
 }
 void PartitionsDef_ValueDef::set_allocated_max_value(::greptime::v1::PartitionsDef_MaxValue* max_value) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  clear_value();
+  clear_content();
   if (max_value) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
       ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(max_value);
@@ -2257,9 +2116,33 @@ void PartitionsDef_ValueDef::set_allocated_max_value(::greptime::v1::PartitionsD
           message_arena, max_value, submessage_arena);
     }
     set_has_max_value();
-    _impl_.value_.max_value_ = max_value;
+    _impl_.content_.max_value_ = max_value;
   }
   // @@protoc_insertion_point(field_set_allocated:greptime.v1.PartitionsDef.ValueDef.max_value)
+}
+void PartitionsDef_ValueDef::set_allocated_value(::greptime::v1::Value* value) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  clear_content();
+  if (value) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(value));
+    if (message_arena != submessage_arena) {
+      value = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, value, submessage_arena);
+    }
+    set_has_value();
+    _impl_.content_.value_ = value;
+  }
+  // @@protoc_insertion_point(field_set_allocated:greptime.v1.PartitionsDef.ValueDef.value)
+}
+void PartitionsDef_ValueDef::clear_value() {
+  if (_internal_has_value()) {
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.content_.value_;
+    }
+    clear_has_content();
+  }
 }
 PartitionsDef_ValueDef::PartitionsDef_ValueDef(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -2271,39 +2154,24 @@ PartitionsDef_ValueDef::PartitionsDef_ValueDef(const PartitionsDef_ValueDef& fro
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   PartitionsDef_ValueDef* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.value_){}
+      decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  clear_has_value();
-  switch (from.value_case()) {
+  clear_has_content();
+  switch (from.content_case()) {
     case kMaxValue: {
       _this->_internal_mutable_max_value()->::greptime::v1::PartitionsDef_MaxValue::MergeFrom(
           from._internal_max_value());
       break;
     }
-    case kInt32Value: {
-      _this->_internal_set_int32_value(from._internal_int32_value());
+    case kValue: {
+      _this->_internal_mutable_value()->::greptime::v1::Value::MergeFrom(
+          from._internal_value());
       break;
     }
-    case kFloat32Value: {
-      _this->_internal_set_float32_value(from._internal_float32_value());
-      break;
-    }
-    case kFloat64Value: {
-      _this->_internal_set_float64_value(from._internal_float64_value());
-      break;
-    }
-    case kStringValue: {
-      _this->_internal_set_string_value(from._internal_string_value());
-      break;
-    }
-    case kBoolValue: {
-      _this->_internal_set_bool_value(from._internal_bool_value());
-      break;
-    }
-    case VALUE_NOT_SET: {
+    case CONTENT_NOT_SET: {
       break;
     }
   }
@@ -2315,11 +2183,11 @@ inline void PartitionsDef_ValueDef::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.value_){}
+      decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}
   };
-  clear_has_value();
+  clear_has_content();
 }
 
 PartitionsDef_ValueDef::~PartitionsDef_ValueDef() {
@@ -2333,8 +2201,8 @@ PartitionsDef_ValueDef::~PartitionsDef_ValueDef() {
 
 inline void PartitionsDef_ValueDef::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (has_value()) {
-    clear_value();
+  if (has_content()) {
+    clear_content();
   }
 }
 
@@ -2342,40 +2210,26 @@ void PartitionsDef_ValueDef::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void PartitionsDef_ValueDef::clear_value() {
+void PartitionsDef_ValueDef::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:greptime.v1.PartitionsDef.ValueDef)
-  switch (value_case()) {
+  switch (content_case()) {
     case kMaxValue: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.value_.max_value_;
+        delete _impl_.content_.max_value_;
       }
       break;
     }
-    case kInt32Value: {
-      // No need to clear
+    case kValue: {
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.content_.value_;
+      }
       break;
     }
-    case kFloat32Value: {
-      // No need to clear
-      break;
-    }
-    case kFloat64Value: {
-      // No need to clear
-      break;
-    }
-    case kStringValue: {
-      _impl_.value_.string_value_.Destroy();
-      break;
-    }
-    case kBoolValue: {
-      // No need to clear
-      break;
-    }
-    case VALUE_NOT_SET: {
+    case CONTENT_NOT_SET: {
       break;
     }
   }
-  _impl_._oneof_case_[0] = VALUE_NOT_SET;
+  _impl_._oneof_case_[0] = CONTENT_NOT_SET;
 }
 
 
@@ -2385,7 +2239,7 @@ void PartitionsDef_ValueDef::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  clear_value();
+  clear_content();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -2403,44 +2257,10 @@ const char* PartitionsDef_ValueDef::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // int32 int32_value = 2;
+      // .greptime.v1.Value value = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _internal_set_int32_value(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // float float32_value = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 29)) {
-          _internal_set_float32_value(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
-          ptr += sizeof(float);
-        } else
-          goto handle_unusual;
-        continue;
-      // double float64_value = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
-          _internal_set_float64_value(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr));
-          ptr += sizeof(double);
-        } else
-          goto handle_unusual;
-        continue;
-      // string string_value = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
-          auto str = _internal_mutable_string_value();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "greptime.v1.PartitionsDef.ValueDef.string_value"));
-        } else
-          goto handle_unusual;
-        continue;
-      // bool bool_value = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
-          _internal_set_bool_value(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_value(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2481,38 +2301,11 @@ uint8_t* PartitionsDef_ValueDef::_InternalSerialize(
         _Internal::max_value(this).GetCachedSize(), target, stream);
   }
 
-  // int32 int32_value = 2;
-  if (_internal_has_int32_value()) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_int32_value(), target);
-  }
-
-  // float float32_value = 3;
-  if (_internal_has_float32_value()) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(3, this->_internal_float32_value(), target);
-  }
-
-  // double float64_value = 4;
-  if (_internal_has_float64_value()) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteDoubleToArray(4, this->_internal_float64_value(), target);
-  }
-
-  // string string_value = 5;
-  if (_internal_has_string_value()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_string_value().data(), static_cast<int>(this->_internal_string_value().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "greptime.v1.PartitionsDef.ValueDef.string_value");
-    target = stream->WriteStringMaybeAliased(
-        5, this->_internal_string_value(), target);
-  }
-
-  // bool bool_value = 6;
-  if (_internal_has_bool_value()) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(6, this->_internal_bool_value(), target);
+  // .greptime.v1.Value value = 2;
+  if (_internal_has_value()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::value(this),
+        _Internal::value(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2531,42 +2324,22 @@ size_t PartitionsDef_ValueDef::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  switch (value_case()) {
+  switch (content_case()) {
     // .greptime.v1.PartitionsDef.MaxValue max_value = 1;
     case kMaxValue: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.value_.max_value_);
+          *_impl_.content_.max_value_);
       break;
     }
-    // int32 int32_value = 2;
-    case kInt32Value: {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_int32_value());
-      break;
-    }
-    // float float32_value = 3;
-    case kFloat32Value: {
-      total_size += 1 + 4;
-      break;
-    }
-    // double float64_value = 4;
-    case kFloat64Value: {
-      total_size += 1 + 8;
-      break;
-    }
-    // string string_value = 5;
-    case kStringValue: {
+    // .greptime.v1.Value value = 2;
+    case kValue: {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_string_value());
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.content_.value_);
       break;
     }
-    // bool bool_value = 6;
-    case kBoolValue: {
-      total_size += 1 + 1;
-      break;
-    }
-    case VALUE_NOT_SET: {
+    case CONTENT_NOT_SET: {
       break;
     }
   }
@@ -2588,33 +2361,18 @@ void PartitionsDef_ValueDef::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  switch (from.value_case()) {
+  switch (from.content_case()) {
     case kMaxValue: {
       _this->_internal_mutable_max_value()->::greptime::v1::PartitionsDef_MaxValue::MergeFrom(
           from._internal_max_value());
       break;
     }
-    case kInt32Value: {
-      _this->_internal_set_int32_value(from._internal_int32_value());
+    case kValue: {
+      _this->_internal_mutable_value()->::greptime::v1::Value::MergeFrom(
+          from._internal_value());
       break;
     }
-    case kFloat32Value: {
-      _this->_internal_set_float32_value(from._internal_float32_value());
-      break;
-    }
-    case kFloat64Value: {
-      _this->_internal_set_float64_value(from._internal_float64_value());
-      break;
-    }
-    case kStringValue: {
-      _this->_internal_set_string_value(from._internal_string_value());
-      break;
-    }
-    case kBoolValue: {
-      _this->_internal_set_bool_value(from._internal_bool_value());
-      break;
-    }
-    case VALUE_NOT_SET: {
+    case CONTENT_NOT_SET: {
       break;
     }
   }
@@ -2635,7 +2393,7 @@ bool PartitionsDef_ValueDef::IsInitialized() const {
 void PartitionsDef_ValueDef::InternalSwap(PartitionsDef_ValueDef* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_.value_, other->_impl_.value_);
+  swap(_impl_.content_, other->_impl_.content_);
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 

@@ -5196,12 +5196,6 @@ java.lang.String defaultValue);
     public interface MaxValueOrBuilder extends
         // @@protoc_insertion_point(interface_extends:greptime.v1.PartitionsDef.MaxValue)
         com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>int32 unused = 1;</code>
-       * @return The unused.
-       */
-      int getUnused();
     }
     /**
      * Protobuf type {@code greptime.v1.PartitionsDef.MaxValue}
@@ -5248,11 +5242,6 @@ java.lang.String defaultValue);
               case 0:
                 done = true;
                 break;
-              case 8: {
-
-                unused_ = input.readInt32();
-                break;
-              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -5287,17 +5276,6 @@ java.lang.String defaultValue);
                 io.greptime.v1.Ddl.PartitionsDef.MaxValue.class, io.greptime.v1.Ddl.PartitionsDef.MaxValue.Builder.class);
       }
 
-      public static final int UNUSED_FIELD_NUMBER = 1;
-      private int unused_;
-      /**
-       * <code>int32 unused = 1;</code>
-       * @return The unused.
-       */
-      @java.lang.Override
-      public int getUnused() {
-        return unused_;
-      }
-
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -5312,9 +5290,6 @@ java.lang.String defaultValue);
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (unused_ != 0) {
-          output.writeInt32(1, unused_);
-        }
         unknownFields.writeTo(output);
       }
 
@@ -5324,10 +5299,6 @@ java.lang.String defaultValue);
         if (size != -1) return size;
 
         size = 0;
-        if (unused_ != 0) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(1, unused_);
-        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -5343,8 +5314,6 @@ java.lang.String defaultValue);
         }
         io.greptime.v1.Ddl.PartitionsDef.MaxValue other = (io.greptime.v1.Ddl.PartitionsDef.MaxValue) obj;
 
-        if (getUnused()
-            != other.getUnused()) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -5356,8 +5325,6 @@ java.lang.String defaultValue);
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + UNUSED_FIELD_NUMBER;
-        hash = (53 * hash) + getUnused();
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -5491,8 +5458,6 @@ java.lang.String defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
-          unused_ = 0;
-
           return this;
         }
 
@@ -5519,7 +5484,6 @@ java.lang.String defaultValue);
         @java.lang.Override
         public io.greptime.v1.Ddl.PartitionsDef.MaxValue buildPartial() {
           io.greptime.v1.Ddl.PartitionsDef.MaxValue result = new io.greptime.v1.Ddl.PartitionsDef.MaxValue(this);
-          result.unused_ = unused_;
           onBuilt();
           return result;
         }
@@ -5568,9 +5532,6 @@ java.lang.String defaultValue);
 
         public Builder mergeFrom(io.greptime.v1.Ddl.PartitionsDef.MaxValue other) {
           if (other == io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance()) return this;
-          if (other.getUnused() != 0) {
-            setUnused(other.getUnused());
-          }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -5597,37 +5558,6 @@ java.lang.String defaultValue);
               mergeFrom(parsedMessage);
             }
           }
-          return this;
-        }
-
-        private int unused_ ;
-        /**
-         * <code>int32 unused = 1;</code>
-         * @return The unused.
-         */
-        @java.lang.Override
-        public int getUnused() {
-          return unused_;
-        }
-        /**
-         * <code>int32 unused = 1;</code>
-         * @param value The unused to set.
-         * @return This builder for chaining.
-         */
-        public Builder setUnused(int value) {
-          
-          unused_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>int32 unused = 1;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearUnused() {
-          
-          unused_ = 0;
-          onChanged();
           return this;
         }
         @java.lang.Override
@@ -5703,67 +5633,21 @@ java.lang.String defaultValue);
       io.greptime.v1.Ddl.PartitionsDef.MaxValueOrBuilder getMaxValueOrBuilder();
 
       /**
-       * <code>int32 int32_value = 2;</code>
-       * @return Whether the int32Value field is set.
+       * <code>.greptime.v1.Value value = 2;</code>
+       * @return Whether the value field is set.
        */
-      boolean hasInt32Value();
+      boolean hasValue();
       /**
-       * <code>int32 int32_value = 2;</code>
-       * @return The int32Value.
+       * <code>.greptime.v1.Value value = 2;</code>
+       * @return The value.
        */
-      int getInt32Value();
+      io.greptime.v1.RowData.Value getValue();
+      /**
+       * <code>.greptime.v1.Value value = 2;</code>
+       */
+      io.greptime.v1.RowData.ValueOrBuilder getValueOrBuilder();
 
-      /**
-       * <code>float float32_value = 3;</code>
-       * @return Whether the float32Value field is set.
-       */
-      boolean hasFloat32Value();
-      /**
-       * <code>float float32_value = 3;</code>
-       * @return The float32Value.
-       */
-      float getFloat32Value();
-
-      /**
-       * <code>double float64_value = 4;</code>
-       * @return Whether the float64Value field is set.
-       */
-      boolean hasFloat64Value();
-      /**
-       * <code>double float64_value = 4;</code>
-       * @return The float64Value.
-       */
-      double getFloat64Value();
-
-      /**
-       * <code>string string_value = 5;</code>
-       * @return Whether the stringValue field is set.
-       */
-      boolean hasStringValue();
-      /**
-       * <code>string string_value = 5;</code>
-       * @return The stringValue.
-       */
-      java.lang.String getStringValue();
-      /**
-       * <code>string string_value = 5;</code>
-       * @return The bytes for stringValue.
-       */
-      com.google.protobuf.ByteString
-          getStringValueBytes();
-
-      /**
-       * <code>bool bool_value = 6;</code>
-       * @return Whether the boolValue field is set.
-       */
-      boolean hasBoolValue();
-      /**
-       * <code>bool bool_value = 6;</code>
-       * @return The boolValue.
-       */
-      boolean getBoolValue();
-
-      public io.greptime.v1.Ddl.PartitionsDef.ValueDef.ValueCase getValueCase();
+      public io.greptime.v1.Ddl.PartitionsDef.ValueDef.ContentCase getContentCase();
     }
     /**
      * Protobuf type {@code greptime.v1.PartitionsDef.ValueDef}
@@ -5812,42 +5696,30 @@ java.lang.String defaultValue);
                 break;
               case 10: {
                 io.greptime.v1.Ddl.PartitionsDef.MaxValue.Builder subBuilder = null;
-                if (valueCase_ == 1) {
-                  subBuilder = ((io.greptime.v1.Ddl.PartitionsDef.MaxValue) value_).toBuilder();
+                if (contentCase_ == 1) {
+                  subBuilder = ((io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_).toBuilder();
                 }
-                value_ =
+                content_ =
                     input.readMessage(io.greptime.v1.Ddl.PartitionsDef.MaxValue.parser(), extensionRegistry);
                 if (subBuilder != null) {
-                  subBuilder.mergeFrom((io.greptime.v1.Ddl.PartitionsDef.MaxValue) value_);
-                  value_ = subBuilder.buildPartial();
+                  subBuilder.mergeFrom((io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_);
+                  content_ = subBuilder.buildPartial();
                 }
-                valueCase_ = 1;
+                contentCase_ = 1;
                 break;
               }
-              case 16: {
-                value_ = input.readInt32();
-                valueCase_ = 2;
-                break;
-              }
-              case 29: {
-                value_ = input.readFloat();
-                valueCase_ = 3;
-                break;
-              }
-              case 33: {
-                value_ = input.readDouble();
-                valueCase_ = 4;
-                break;
-              }
-              case 42: {
-                java.lang.String s = input.readStringRequireUtf8();
-                valueCase_ = 5;
-                value_ = s;
-                break;
-              }
-              case 48: {
-                value_ = input.readBool();
-                valueCase_ = 6;
+              case 18: {
+                io.greptime.v1.RowData.Value.Builder subBuilder = null;
+                if (contentCase_ == 2) {
+                  subBuilder = ((io.greptime.v1.RowData.Value) content_).toBuilder();
+                }
+                content_ =
+                    input.readMessage(io.greptime.v1.RowData.Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((io.greptime.v1.RowData.Value) content_);
+                  content_ = subBuilder.buildPartial();
+                }
+                contentCase_ = 2;
                 break;
               }
               default: {
@@ -5884,20 +5756,16 @@ java.lang.String defaultValue);
                 io.greptime.v1.Ddl.PartitionsDef.ValueDef.class, io.greptime.v1.Ddl.PartitionsDef.ValueDef.Builder.class);
       }
 
-      private int valueCase_ = 0;
-      private java.lang.Object value_;
-      public enum ValueCase
+      private int contentCase_ = 0;
+      private java.lang.Object content_;
+      public enum ContentCase
           implements com.google.protobuf.Internal.EnumLite,
               com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         MAX_VALUE(1),
-        INT32_VALUE(2),
-        FLOAT32_VALUE(3),
-        FLOAT64_VALUE(4),
-        STRING_VALUE(5),
-        BOOL_VALUE(6),
-        VALUE_NOT_SET(0);
+        VALUE(2),
+        CONTENT_NOT_SET(0);
         private final int value;
-        private ValueCase(int value) {
+        private ContentCase(int value) {
           this.value = value;
         }
         /**
@@ -5906,19 +5774,15 @@ java.lang.String defaultValue);
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
-        public static ValueCase valueOf(int value) {
+        public static ContentCase valueOf(int value) {
           return forNumber(value);
         }
 
-        public static ValueCase forNumber(int value) {
+        public static ContentCase forNumber(int value) {
           switch (value) {
             case 1: return MAX_VALUE;
-            case 2: return INT32_VALUE;
-            case 3: return FLOAT32_VALUE;
-            case 4: return FLOAT64_VALUE;
-            case 5: return STRING_VALUE;
-            case 6: return BOOL_VALUE;
-            case 0: return VALUE_NOT_SET;
+            case 2: return VALUE;
+            case 0: return CONTENT_NOT_SET;
             default: return null;
           }
         }
@@ -5927,10 +5791,10 @@ java.lang.String defaultValue);
         }
       };
 
-      public ValueCase
-      getValueCase() {
-        return ValueCase.forNumber(
-            valueCase_);
+      public ContentCase
+      getContentCase() {
+        return ContentCase.forNumber(
+            contentCase_);
       }
 
       public static final int MAX_VALUE_FIELD_NUMBER = 1;
@@ -5940,7 +5804,7 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public boolean hasMaxValue() {
-        return valueCase_ == 1;
+        return contentCase_ == 1;
       }
       /**
        * <code>.greptime.v1.PartitionsDef.MaxValue max_value = 1;</code>
@@ -5948,8 +5812,8 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public io.greptime.v1.Ddl.PartitionsDef.MaxValue getMaxValue() {
-        if (valueCase_ == 1) {
-           return (io.greptime.v1.Ddl.PartitionsDef.MaxValue) value_;
+        if (contentCase_ == 1) {
+           return (io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_;
         }
         return io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance();
       }
@@ -5958,146 +5822,41 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public io.greptime.v1.Ddl.PartitionsDef.MaxValueOrBuilder getMaxValueOrBuilder() {
-        if (valueCase_ == 1) {
-           return (io.greptime.v1.Ddl.PartitionsDef.MaxValue) value_;
+        if (contentCase_ == 1) {
+           return (io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_;
         }
         return io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance();
       }
 
-      public static final int INT32_VALUE_FIELD_NUMBER = 2;
+      public static final int VALUE_FIELD_NUMBER = 2;
       /**
-       * <code>int32 int32_value = 2;</code>
-       * @return Whether the int32Value field is set.
+       * <code>.greptime.v1.Value value = 2;</code>
+       * @return Whether the value field is set.
        */
       @java.lang.Override
-      public boolean hasInt32Value() {
-        return valueCase_ == 2;
+      public boolean hasValue() {
+        return contentCase_ == 2;
       }
       /**
-       * <code>int32 int32_value = 2;</code>
-       * @return The int32Value.
+       * <code>.greptime.v1.Value value = 2;</code>
+       * @return The value.
        */
       @java.lang.Override
-      public int getInt32Value() {
-        if (valueCase_ == 2) {
-          return (java.lang.Integer) value_;
+      public io.greptime.v1.RowData.Value getValue() {
+        if (contentCase_ == 2) {
+           return (io.greptime.v1.RowData.Value) content_;
         }
-        return 0;
+        return io.greptime.v1.RowData.Value.getDefaultInstance();
       }
-
-      public static final int FLOAT32_VALUE_FIELD_NUMBER = 3;
       /**
-       * <code>float float32_value = 3;</code>
-       * @return Whether the float32Value field is set.
+       * <code>.greptime.v1.Value value = 2;</code>
        */
       @java.lang.Override
-      public boolean hasFloat32Value() {
-        return valueCase_ == 3;
-      }
-      /**
-       * <code>float float32_value = 3;</code>
-       * @return The float32Value.
-       */
-      @java.lang.Override
-      public float getFloat32Value() {
-        if (valueCase_ == 3) {
-          return (java.lang.Float) value_;
+      public io.greptime.v1.RowData.ValueOrBuilder getValueOrBuilder() {
+        if (contentCase_ == 2) {
+           return (io.greptime.v1.RowData.Value) content_;
         }
-        return 0F;
-      }
-
-      public static final int FLOAT64_VALUE_FIELD_NUMBER = 4;
-      /**
-       * <code>double float64_value = 4;</code>
-       * @return Whether the float64Value field is set.
-       */
-      @java.lang.Override
-      public boolean hasFloat64Value() {
-        return valueCase_ == 4;
-      }
-      /**
-       * <code>double float64_value = 4;</code>
-       * @return The float64Value.
-       */
-      @java.lang.Override
-      public double getFloat64Value() {
-        if (valueCase_ == 4) {
-          return (java.lang.Double) value_;
-        }
-        return 0D;
-      }
-
-      public static final int STRING_VALUE_FIELD_NUMBER = 5;
-      /**
-       * <code>string string_value = 5;</code>
-       * @return Whether the stringValue field is set.
-       */
-      public boolean hasStringValue() {
-        return valueCase_ == 5;
-      }
-      /**
-       * <code>string string_value = 5;</code>
-       * @return The stringValue.
-       */
-      public java.lang.String getStringValue() {
-        java.lang.Object ref = "";
-        if (valueCase_ == 5) {
-          ref = value_;
-        }
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (valueCase_ == 5) {
-            value_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>string string_value = 5;</code>
-       * @return The bytes for stringValue.
-       */
-      public com.google.protobuf.ByteString
-          getStringValueBytes() {
-        java.lang.Object ref = "";
-        if (valueCase_ == 5) {
-          ref = value_;
-        }
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          if (valueCase_ == 5) {
-            value_ = b;
-          }
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int BOOL_VALUE_FIELD_NUMBER = 6;
-      /**
-       * <code>bool bool_value = 6;</code>
-       * @return Whether the boolValue field is set.
-       */
-      @java.lang.Override
-      public boolean hasBoolValue() {
-        return valueCase_ == 6;
-      }
-      /**
-       * <code>bool bool_value = 6;</code>
-       * @return The boolValue.
-       */
-      @java.lang.Override
-      public boolean getBoolValue() {
-        if (valueCase_ == 6) {
-          return (java.lang.Boolean) value_;
-        }
-        return false;
+        return io.greptime.v1.RowData.Value.getDefaultInstance();
       }
 
       private byte memoizedIsInitialized = -1;
@@ -6114,27 +5873,11 @@ java.lang.String defaultValue);
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (valueCase_ == 1) {
-          output.writeMessage(1, (io.greptime.v1.Ddl.PartitionsDef.MaxValue) value_);
+        if (contentCase_ == 1) {
+          output.writeMessage(1, (io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_);
         }
-        if (valueCase_ == 2) {
-          output.writeInt32(
-              2, (int)((java.lang.Integer) value_));
-        }
-        if (valueCase_ == 3) {
-          output.writeFloat(
-              3, (float)((java.lang.Float) value_));
-        }
-        if (valueCase_ == 4) {
-          output.writeDouble(
-              4, (double)((java.lang.Double) value_));
-        }
-        if (valueCase_ == 5) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 5, value_);
-        }
-        if (valueCase_ == 6) {
-          output.writeBool(
-              6, (boolean)((java.lang.Boolean) value_));
+        if (contentCase_ == 2) {
+          output.writeMessage(2, (io.greptime.v1.RowData.Value) content_);
         }
         unknownFields.writeTo(output);
       }
@@ -6145,32 +5888,13 @@ java.lang.String defaultValue);
         if (size != -1) return size;
 
         size = 0;
-        if (valueCase_ == 1) {
+        if (contentCase_ == 1) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, (io.greptime.v1.Ddl.PartitionsDef.MaxValue) value_);
+            .computeMessageSize(1, (io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_);
         }
-        if (valueCase_ == 2) {
+        if (contentCase_ == 2) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(
-                2, (int)((java.lang.Integer) value_));
-        }
-        if (valueCase_ == 3) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeFloatSize(
-                3, (float)((java.lang.Float) value_));
-        }
-        if (valueCase_ == 4) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeDoubleSize(
-                4, (double)((java.lang.Double) value_));
-        }
-        if (valueCase_ == 5) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, value_);
-        }
-        if (valueCase_ == 6) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBoolSize(
-                6, (boolean)((java.lang.Boolean) value_));
+            .computeMessageSize(2, (io.greptime.v1.RowData.Value) content_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -6187,33 +5911,15 @@ java.lang.String defaultValue);
         }
         io.greptime.v1.Ddl.PartitionsDef.ValueDef other = (io.greptime.v1.Ddl.PartitionsDef.ValueDef) obj;
 
-        if (!getValueCase().equals(other.getValueCase())) return false;
-        switch (valueCase_) {
+        if (!getContentCase().equals(other.getContentCase())) return false;
+        switch (contentCase_) {
           case 1:
             if (!getMaxValue()
                 .equals(other.getMaxValue())) return false;
             break;
           case 2:
-            if (getInt32Value()
-                != other.getInt32Value()) return false;
-            break;
-          case 3:
-            if (java.lang.Float.floatToIntBits(getFloat32Value())
-                != java.lang.Float.floatToIntBits(
-                    other.getFloat32Value())) return false;
-            break;
-          case 4:
-            if (java.lang.Double.doubleToLongBits(getFloat64Value())
-                != java.lang.Double.doubleToLongBits(
-                    other.getFloat64Value())) return false;
-            break;
-          case 5:
-            if (!getStringValue()
-                .equals(other.getStringValue())) return false;
-            break;
-          case 6:
-            if (getBoolValue()
-                != other.getBoolValue()) return false;
+            if (!getValue()
+                .equals(other.getValue())) return false;
             break;
           case 0:
           default:
@@ -6229,33 +5935,14 @@ java.lang.String defaultValue);
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
-        switch (valueCase_) {
+        switch (contentCase_) {
           case 1:
             hash = (37 * hash) + MAX_VALUE_FIELD_NUMBER;
             hash = (53 * hash) + getMaxValue().hashCode();
             break;
           case 2:
-            hash = (37 * hash) + INT32_VALUE_FIELD_NUMBER;
-            hash = (53 * hash) + getInt32Value();
-            break;
-          case 3:
-            hash = (37 * hash) + FLOAT32_VALUE_FIELD_NUMBER;
-            hash = (53 * hash) + java.lang.Float.floatToIntBits(
-                getFloat32Value());
-            break;
-          case 4:
-            hash = (37 * hash) + FLOAT64_VALUE_FIELD_NUMBER;
-            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-                java.lang.Double.doubleToLongBits(getFloat64Value()));
-            break;
-          case 5:
-            hash = (37 * hash) + STRING_VALUE_FIELD_NUMBER;
-            hash = (53 * hash) + getStringValue().hashCode();
-            break;
-          case 6:
-            hash = (37 * hash) + BOOL_VALUE_FIELD_NUMBER;
-            hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-                getBoolValue());
+            hash = (37 * hash) + VALUE_FIELD_NUMBER;
+            hash = (53 * hash) + getValue().hashCode();
             break;
           case 0:
           default:
@@ -6393,8 +6080,8 @@ java.lang.String defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
-          valueCase_ = 0;
-          value_ = null;
+          contentCase_ = 0;
+          content_ = null;
           return this;
         }
 
@@ -6421,29 +6108,21 @@ java.lang.String defaultValue);
         @java.lang.Override
         public io.greptime.v1.Ddl.PartitionsDef.ValueDef buildPartial() {
           io.greptime.v1.Ddl.PartitionsDef.ValueDef result = new io.greptime.v1.Ddl.PartitionsDef.ValueDef(this);
-          if (valueCase_ == 1) {
+          if (contentCase_ == 1) {
             if (maxValueBuilder_ == null) {
-              result.value_ = value_;
+              result.content_ = content_;
             } else {
-              result.value_ = maxValueBuilder_.build();
+              result.content_ = maxValueBuilder_.build();
             }
           }
-          if (valueCase_ == 2) {
-            result.value_ = value_;
+          if (contentCase_ == 2) {
+            if (valueBuilder_ == null) {
+              result.content_ = content_;
+            } else {
+              result.content_ = valueBuilder_.build();
+            }
           }
-          if (valueCase_ == 3) {
-            result.value_ = value_;
-          }
-          if (valueCase_ == 4) {
-            result.value_ = value_;
-          }
-          if (valueCase_ == 5) {
-            result.value_ = value_;
-          }
-          if (valueCase_ == 6) {
-            result.value_ = value_;
-          }
-          result.valueCase_ = valueCase_;
+          result.contentCase_ = contentCase_;
           onBuilt();
           return result;
         }
@@ -6492,34 +6171,16 @@ java.lang.String defaultValue);
 
         public Builder mergeFrom(io.greptime.v1.Ddl.PartitionsDef.ValueDef other) {
           if (other == io.greptime.v1.Ddl.PartitionsDef.ValueDef.getDefaultInstance()) return this;
-          switch (other.getValueCase()) {
+          switch (other.getContentCase()) {
             case MAX_VALUE: {
               mergeMaxValue(other.getMaxValue());
               break;
             }
-            case INT32_VALUE: {
-              setInt32Value(other.getInt32Value());
+            case VALUE: {
+              mergeValue(other.getValue());
               break;
             }
-            case FLOAT32_VALUE: {
-              setFloat32Value(other.getFloat32Value());
-              break;
-            }
-            case FLOAT64_VALUE: {
-              setFloat64Value(other.getFloat64Value());
-              break;
-            }
-            case STRING_VALUE: {
-              valueCase_ = 5;
-              value_ = other.value_;
-              onChanged();
-              break;
-            }
-            case BOOL_VALUE: {
-              setBoolValue(other.getBoolValue());
-              break;
-            }
-            case VALUE_NOT_SET: {
+            case CONTENT_NOT_SET: {
               break;
             }
           }
@@ -6551,17 +6212,17 @@ java.lang.String defaultValue);
           }
           return this;
         }
-        private int valueCase_ = 0;
-        private java.lang.Object value_;
-        public ValueCase
-            getValueCase() {
-          return ValueCase.forNumber(
-              valueCase_);
+        private int contentCase_ = 0;
+        private java.lang.Object content_;
+        public ContentCase
+            getContentCase() {
+          return ContentCase.forNumber(
+              contentCase_);
         }
 
-        public Builder clearValue() {
-          valueCase_ = 0;
-          value_ = null;
+        public Builder clearContent() {
+          contentCase_ = 0;
+          content_ = null;
           onChanged();
           return this;
         }
@@ -6575,7 +6236,7 @@ java.lang.String defaultValue);
          */
         @java.lang.Override
         public boolean hasMaxValue() {
-          return valueCase_ == 1;
+          return contentCase_ == 1;
         }
         /**
          * <code>.greptime.v1.PartitionsDef.MaxValue max_value = 1;</code>
@@ -6584,12 +6245,12 @@ java.lang.String defaultValue);
         @java.lang.Override
         public io.greptime.v1.Ddl.PartitionsDef.MaxValue getMaxValue() {
           if (maxValueBuilder_ == null) {
-            if (valueCase_ == 1) {
-              return (io.greptime.v1.Ddl.PartitionsDef.MaxValue) value_;
+            if (contentCase_ == 1) {
+              return (io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_;
             }
             return io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance();
           } else {
-            if (valueCase_ == 1) {
+            if (contentCase_ == 1) {
               return maxValueBuilder_.getMessage();
             }
             return io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance();
@@ -6603,12 +6264,12 @@ java.lang.String defaultValue);
             if (value == null) {
               throw new NullPointerException();
             }
-            value_ = value;
+            content_ = value;
             onChanged();
           } else {
             maxValueBuilder_.setMessage(value);
           }
-          valueCase_ = 1;
+          contentCase_ = 1;
           return this;
         }
         /**
@@ -6617,12 +6278,12 @@ java.lang.String defaultValue);
         public Builder setMaxValue(
             io.greptime.v1.Ddl.PartitionsDef.MaxValue.Builder builderForValue) {
           if (maxValueBuilder_ == null) {
-            value_ = builderForValue.build();
+            content_ = builderForValue.build();
             onChanged();
           } else {
             maxValueBuilder_.setMessage(builderForValue.build());
           }
-          valueCase_ = 1;
+          contentCase_ = 1;
           return this;
         }
         /**
@@ -6630,22 +6291,22 @@ java.lang.String defaultValue);
          */
         public Builder mergeMaxValue(io.greptime.v1.Ddl.PartitionsDef.MaxValue value) {
           if (maxValueBuilder_ == null) {
-            if (valueCase_ == 1 &&
-                value_ != io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance()) {
-              value_ = io.greptime.v1.Ddl.PartitionsDef.MaxValue.newBuilder((io.greptime.v1.Ddl.PartitionsDef.MaxValue) value_)
+            if (contentCase_ == 1 &&
+                content_ != io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance()) {
+              content_ = io.greptime.v1.Ddl.PartitionsDef.MaxValue.newBuilder((io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_)
                   .mergeFrom(value).buildPartial();
             } else {
-              value_ = value;
+              content_ = value;
             }
             onChanged();
           } else {
-            if (valueCase_ == 1) {
+            if (contentCase_ == 1) {
               maxValueBuilder_.mergeFrom(value);
             } else {
               maxValueBuilder_.setMessage(value);
             }
           }
-          valueCase_ = 1;
+          contentCase_ = 1;
           return this;
         }
         /**
@@ -6653,15 +6314,15 @@ java.lang.String defaultValue);
          */
         public Builder clearMaxValue() {
           if (maxValueBuilder_ == null) {
-            if (valueCase_ == 1) {
-              valueCase_ = 0;
-              value_ = null;
+            if (contentCase_ == 1) {
+              contentCase_ = 0;
+              content_ = null;
               onChanged();
             }
           } else {
-            if (valueCase_ == 1) {
-              valueCase_ = 0;
-              value_ = null;
+            if (contentCase_ == 1) {
+              contentCase_ = 0;
+              content_ = null;
             }
             maxValueBuilder_.clear();
           }
@@ -6678,11 +6339,11 @@ java.lang.String defaultValue);
          */
         @java.lang.Override
         public io.greptime.v1.Ddl.PartitionsDef.MaxValueOrBuilder getMaxValueOrBuilder() {
-          if ((valueCase_ == 1) && (maxValueBuilder_ != null)) {
+          if ((contentCase_ == 1) && (maxValueBuilder_ != null)) {
             return maxValueBuilder_.getMessageOrBuilder();
           } else {
-            if (valueCase_ == 1) {
-              return (io.greptime.v1.Ddl.PartitionsDef.MaxValue) value_;
+            if (contentCase_ == 1) {
+              return (io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_;
             }
             return io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance();
           }
@@ -6694,280 +6355,161 @@ java.lang.String defaultValue);
             io.greptime.v1.Ddl.PartitionsDef.MaxValue, io.greptime.v1.Ddl.PartitionsDef.MaxValue.Builder, io.greptime.v1.Ddl.PartitionsDef.MaxValueOrBuilder> 
             getMaxValueFieldBuilder() {
           if (maxValueBuilder_ == null) {
-            if (!(valueCase_ == 1)) {
-              value_ = io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance();
+            if (!(contentCase_ == 1)) {
+              content_ = io.greptime.v1.Ddl.PartitionsDef.MaxValue.getDefaultInstance();
             }
             maxValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
                 io.greptime.v1.Ddl.PartitionsDef.MaxValue, io.greptime.v1.Ddl.PartitionsDef.MaxValue.Builder, io.greptime.v1.Ddl.PartitionsDef.MaxValueOrBuilder>(
-                    (io.greptime.v1.Ddl.PartitionsDef.MaxValue) value_,
+                    (io.greptime.v1.Ddl.PartitionsDef.MaxValue) content_,
                     getParentForChildren(),
                     isClean());
-            value_ = null;
+            content_ = null;
           }
-          valueCase_ = 1;
+          contentCase_ = 1;
           onChanged();;
           return maxValueBuilder_;
         }
 
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.greptime.v1.RowData.Value, io.greptime.v1.RowData.Value.Builder, io.greptime.v1.RowData.ValueOrBuilder> valueBuilder_;
         /**
-         * <code>int32 int32_value = 2;</code>
-         * @return Whether the int32Value field is set.
-         */
-        public boolean hasInt32Value() {
-          return valueCase_ == 2;
-        }
-        /**
-         * <code>int32 int32_value = 2;</code>
-         * @return The int32Value.
-         */
-        public int getInt32Value() {
-          if (valueCase_ == 2) {
-            return (java.lang.Integer) value_;
-          }
-          return 0;
-        }
-        /**
-         * <code>int32 int32_value = 2;</code>
-         * @param value The int32Value to set.
-         * @return This builder for chaining.
-         */
-        public Builder setInt32Value(int value) {
-          valueCase_ = 2;
-          value_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>int32 int32_value = 2;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearInt32Value() {
-          if (valueCase_ == 2) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-          return this;
-        }
-
-        /**
-         * <code>float float32_value = 3;</code>
-         * @return Whether the float32Value field is set.
-         */
-        public boolean hasFloat32Value() {
-          return valueCase_ == 3;
-        }
-        /**
-         * <code>float float32_value = 3;</code>
-         * @return The float32Value.
-         */
-        public float getFloat32Value() {
-          if (valueCase_ == 3) {
-            return (java.lang.Float) value_;
-          }
-          return 0F;
-        }
-        /**
-         * <code>float float32_value = 3;</code>
-         * @param value The float32Value to set.
-         * @return This builder for chaining.
-         */
-        public Builder setFloat32Value(float value) {
-          valueCase_ = 3;
-          value_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>float float32_value = 3;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearFloat32Value() {
-          if (valueCase_ == 3) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-          return this;
-        }
-
-        /**
-         * <code>double float64_value = 4;</code>
-         * @return Whether the float64Value field is set.
-         */
-        public boolean hasFloat64Value() {
-          return valueCase_ == 4;
-        }
-        /**
-         * <code>double float64_value = 4;</code>
-         * @return The float64Value.
-         */
-        public double getFloat64Value() {
-          if (valueCase_ == 4) {
-            return (java.lang.Double) value_;
-          }
-          return 0D;
-        }
-        /**
-         * <code>double float64_value = 4;</code>
-         * @param value The float64Value to set.
-         * @return This builder for chaining.
-         */
-        public Builder setFloat64Value(double value) {
-          valueCase_ = 4;
-          value_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>double float64_value = 4;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearFloat64Value() {
-          if (valueCase_ == 4) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-          return this;
-        }
-
-        /**
-         * <code>string string_value = 5;</code>
-         * @return Whether the stringValue field is set.
+         * <code>.greptime.v1.Value value = 2;</code>
+         * @return Whether the value field is set.
          */
         @java.lang.Override
-        public boolean hasStringValue() {
-          return valueCase_ == 5;
+        public boolean hasValue() {
+          return contentCase_ == 2;
         }
         /**
-         * <code>string string_value = 5;</code>
-         * @return The stringValue.
+         * <code>.greptime.v1.Value value = 2;</code>
+         * @return The value.
          */
         @java.lang.Override
-        public java.lang.String getStringValue() {
-          java.lang.Object ref = "";
-          if (valueCase_ == 5) {
-            ref = value_;
-          }
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (valueCase_ == 5) {
-              value_ = s;
+        public io.greptime.v1.RowData.Value getValue() {
+          if (valueBuilder_ == null) {
+            if (contentCase_ == 2) {
+              return (io.greptime.v1.RowData.Value) content_;
             }
-            return s;
+            return io.greptime.v1.RowData.Value.getDefaultInstance();
           } else {
-            return (java.lang.String) ref;
+            if (contentCase_ == 2) {
+              return valueBuilder_.getMessage();
+            }
+            return io.greptime.v1.RowData.Value.getDefaultInstance();
           }
         }
         /**
-         * <code>string string_value = 5;</code>
-         * @return The bytes for stringValue.
+         * <code>.greptime.v1.Value value = 2;</code>
+         */
+        public Builder setValue(io.greptime.v1.RowData.Value value) {
+          if (valueBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            content_ = value;
+            onChanged();
+          } else {
+            valueBuilder_.setMessage(value);
+          }
+          contentCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.greptime.v1.Value value = 2;</code>
+         */
+        public Builder setValue(
+            io.greptime.v1.RowData.Value.Builder builderForValue) {
+          if (valueBuilder_ == null) {
+            content_ = builderForValue.build();
+            onChanged();
+          } else {
+            valueBuilder_.setMessage(builderForValue.build());
+          }
+          contentCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.greptime.v1.Value value = 2;</code>
+         */
+        public Builder mergeValue(io.greptime.v1.RowData.Value value) {
+          if (valueBuilder_ == null) {
+            if (contentCase_ == 2 &&
+                content_ != io.greptime.v1.RowData.Value.getDefaultInstance()) {
+              content_ = io.greptime.v1.RowData.Value.newBuilder((io.greptime.v1.RowData.Value) content_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              content_ = value;
+            }
+            onChanged();
+          } else {
+            if (contentCase_ == 2) {
+              valueBuilder_.mergeFrom(value);
+            } else {
+              valueBuilder_.setMessage(value);
+            }
+          }
+          contentCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.greptime.v1.Value value = 2;</code>
+         */
+        public Builder clearValue() {
+          if (valueBuilder_ == null) {
+            if (contentCase_ == 2) {
+              contentCase_ = 0;
+              content_ = null;
+              onChanged();
+            }
+          } else {
+            if (contentCase_ == 2) {
+              contentCase_ = 0;
+              content_ = null;
+            }
+            valueBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.greptime.v1.Value value = 2;</code>
+         */
+        public io.greptime.v1.RowData.Value.Builder getValueBuilder() {
+          return getValueFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.greptime.v1.Value value = 2;</code>
          */
         @java.lang.Override
-        public com.google.protobuf.ByteString
-            getStringValueBytes() {
-          java.lang.Object ref = "";
-          if (valueCase_ == 5) {
-            ref = value_;
-          }
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            if (valueCase_ == 5) {
-              value_ = b;
-            }
-            return b;
+        public io.greptime.v1.RowData.ValueOrBuilder getValueOrBuilder() {
+          if ((contentCase_ == 2) && (valueBuilder_ != null)) {
+            return valueBuilder_.getMessageOrBuilder();
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            if (contentCase_ == 2) {
+              return (io.greptime.v1.RowData.Value) content_;
+            }
+            return io.greptime.v1.RowData.Value.getDefaultInstance();
           }
         }
         /**
-         * <code>string string_value = 5;</code>
-         * @param value The stringValue to set.
-         * @return This builder for chaining.
+         * <code>.greptime.v1.Value value = 2;</code>
          */
-        public Builder setStringValue(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  valueCase_ = 5;
-          value_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string string_value = 5;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearStringValue() {
-          if (valueCase_ == 5) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.greptime.v1.RowData.Value, io.greptime.v1.RowData.Value.Builder, io.greptime.v1.RowData.ValueOrBuilder> 
+            getValueFieldBuilder() {
+          if (valueBuilder_ == null) {
+            if (!(contentCase_ == 2)) {
+              content_ = io.greptime.v1.RowData.Value.getDefaultInstance();
+            }
+            valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                io.greptime.v1.RowData.Value, io.greptime.v1.RowData.Value.Builder, io.greptime.v1.RowData.ValueOrBuilder>(
+                    (io.greptime.v1.RowData.Value) content_,
+                    getParentForChildren(),
+                    isClean());
+            content_ = null;
           }
-          return this;
-        }
-        /**
-         * <code>string string_value = 5;</code>
-         * @param value The bytes for stringValue to set.
-         * @return This builder for chaining.
-         */
-        public Builder setStringValueBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          valueCase_ = 5;
-          value_ = value;
-          onChanged();
-          return this;
-        }
-
-        /**
-         * <code>bool bool_value = 6;</code>
-         * @return Whether the boolValue field is set.
-         */
-        public boolean hasBoolValue() {
-          return valueCase_ == 6;
-        }
-        /**
-         * <code>bool bool_value = 6;</code>
-         * @return The boolValue.
-         */
-        public boolean getBoolValue() {
-          if (valueCase_ == 6) {
-            return (java.lang.Boolean) value_;
-          }
-          return false;
-        }
-        /**
-         * <code>bool bool_value = 6;</code>
-         * @param value The boolValue to set.
-         * @return This builder for chaining.
-         */
-        public Builder setBoolValue(boolean value) {
-          valueCase_ = 6;
-          value_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>bool bool_value = 6;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearBoolValue() {
-          if (valueCase_ == 6) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-          return this;
+          contentCase_ = 2;
+          onChanged();;
+          return valueBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -20697,81 +20239,80 @@ java.lang.String defaultValue);
   static {
     java.lang.String[] descriptorData = {
       "\n\025greptime/v1/ddl.proto\022\013greptime.v1\032\030gr" +
-      "eptime/v1/common.proto\"\207\003\n\nDdlRequest\022:\n" +
-      "\017create_database\030\001 \001(\0132\037.greptime.v1.Cre" +
-      "ateDatabaseExprH\000\0224\n\014create_table\030\002 \001(\0132" +
-      "\034.greptime.v1.CreateTableExprH\000\022\'\n\005alter" +
-      "\030\003 \001(\0132\026.greptime.v1.AlterExprH\000\0220\n\ndrop" +
-      "_table\030\004 \001(\0132\032.greptime.v1.DropTableExpr" +
-      "H\000\0222\n\013flush_table\030\005 \001(\0132\033.greptime.v1.Fl" +
-      "ushTableExprH\000\0226\n\rcompact_table\030\006 \001(\0132\035." +
-      "greptime.v1.CompactTableExprH\000\0228\n\016trunca" +
-      "te_table\030\007 \001(\0132\036.greptime.v1.TruncateTab" +
-      "leExprH\000B\006\n\004expr\"\323\003\n\017CreateTableExpr\022\024\n\014" +
-      "catalog_name\030\001 \001(\t\022\023\n\013schema_name\030\002 \001(\t\022" +
-      "\022\n\ntable_name\030\003 \001(\t\022\014\n\004desc\030\004 \001(\t\022+\n\013col" +
-      "umn_defs\030\005 \003(\0132\026.greptime.v1.ColumnDef\022\022" +
-      "\n\ntime_index\030\006 \001(\t\022\024\n\014primary_keys\030\007 \003(\t" +
-      "\022\034\n\024create_if_not_exists\030\010 \001(\010\022E\n\rtable_" +
-      "options\030\t \003(\0132..greptime.v1.CreateTableE" +
-      "xpr.TableOptionsEntry\022&\n\010table_id\030\n \001(\0132" +
-      "\024.greptime.v1.TableId\022\026\n\016region_numbers\030" +
-      "\013 \003(\r\022\016\n\006engine\030\014 \001(\t\0222\n\016partitions_def\030" +
-      "\r \001(\0132\032.greptime.v1.PartitionsDef\0323\n\021Tab" +
-      "leOptionsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"\240\003\n\rPartitionsDef\022\024\n\014column_names" +
-      "\030\001 \003(\t\022?\n\016partition_defs\030\002 \003(\0132\'.greptim" +
-      "e.v1.PartitionsDef.PartitionDef\032\032\n\010MaxVa" +
-      "lue\022\016\n\006unused\030\001 \001(\005\032\304\001\n\010ValueDef\0228\n\tmax_" +
-      "value\030\001 \001(\0132#.greptime.v1.PartitionsDef." +
-      "MaxValueH\000\022\025\n\013int32_value\030\002 \001(\005H\000\022\027\n\rflo" +
-      "at32_value\030\003 \001(\002H\000\022\027\n\rfloat64_value\030\004 \001(" +
-      "\001H\000\022\026\n\014string_value\030\005 \001(\tH\000\022\024\n\nbool_valu" +
-      "e\030\006 \001(\010H\000B\007\n\005value\032U\n\014PartitionDef\022\014\n\004na" +
-      "me\030\001 \001(\t\0227\n\nvalue_defs\030\002 \003(\0132#.greptime." +
-      "v1.PartitionsDef.ValueDef\"\245\002\n\tAlterExpr\022" +
-      "\024\n\014catalog_name\030\001 \001(\t\022\023\n\013schema_name\030\002 \001" +
-      "(\t\022\022\n\ntable_name\030\003 \001(\t\022.\n\013add_columns\030\004 " +
-      "\001(\0132\027.greptime.v1.AddColumnsH\000\0220\n\014drop_c" +
-      "olumns\030\005 \001(\0132\030.greptime.v1.DropColumnsH\000" +
-      "\0220\n\014rename_table\030\006 \001(\0132\030.greptime.v1.Ren" +
-      "ameTableH\000\022&\n\010table_id\030\007 \001(\0132\024.greptime." +
-      "v1.TableId\022\025\n\rtable_version\030\010 \001(\004B\006\n\004kin" +
-      "d\"v\n\rDropTableExpr\022\024\n\014catalog_name\030\001 \001(\t" +
-      "\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntable_name\030\003 \001(" +
-      "\t\022&\n\010table_id\030\004 \001(\0132\024.greptime.v1.TableI" +
-      "d\"\245\001\n\016FlushTableExpr\022\024\n\014catalog_name\030\001 \001" +
-      "(\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntable_name\030\003 " +
-      "\001(\t\022\032\n\rregion_number\030\004 \001(\rH\000\210\001\001\022&\n\010table" +
-      "_id\030\005 \001(\0132\024.greptime.v1.TableIdB\020\n\016_regi" +
-      "on_number\"\177\n\020CompactTableExpr\022\024\n\014catalog" +
-      "_name\030\001 \001(\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntabl" +
-      "e_name\030\003 \001(\t\022\032\n\rregion_number\030\004 \001(\rH\000\210\001\001" +
-      "B\020\n\016_region_number\"I\n\022CreateDatabaseExpr" +
-      "\022\025\n\rdatabase_name\030\001 \001(\t\022\034\n\024create_if_not" +
-      "_exists\030\002 \001(\010\"z\n\021TruncateTableExpr\022\024\n\014ca" +
-      "talog_name\030\001 \001(\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n" +
-      "\ntable_name\030\003 \001(\t\022&\n\010table_id\030\004 \001(\0132\024.gr" +
-      "eptime.v1.TableId\"9\n\nAddColumns\022+\n\013add_c" +
-      "olumns\030\001 \003(\0132\026.greptime.v1.AddColumn\"<\n\013" +
-      "DropColumns\022-\n\014drop_columns\030\001 \003(\0132\027.grep" +
-      "time.v1.DropColumn\"%\n\013RenameTable\022\026\n\016new" +
-      "_table_name\030\001 \001(\t\"\215\002\n\tAddColumn\022*\n\ncolum" +
-      "n_def\030\001 \001(\0132\026.greptime.v1.ColumnDef\022\016\n\006i" +
-      "s_key\030\002 \001(\010\0221\n\010location\030\003 \001(\0132\037.greptime" +
-      ".v1.AddColumn.Location\032\220\001\n\010Location\022C\n\rl" +
-      "ocation_type\030\001 \001(\0162,.greptime.v1.AddColu" +
-      "mn.Location.LocationType\022\031\n\021after_cloumn" +
-      "_name\030\002 \001(\t\"$\n\014LocationType\022\t\n\005FIRST\020\000\022\t" +
-      "\n\005AFTER\020\001\"\032\n\nDropColumn\022\014\n\004name\030\001 \001(\t\"\025\n" +
-      "\007TableId\022\n\n\002id\030\001 \001(\rBL\n\016io.greptime.v1B\003" +
-      "DdlZ5github.com/GreptimeTeam/greptime-pr" +
-      "oto/go/greptime/v1b\006proto3"
+      "eptime/v1/common.proto\032\025greptime/v1/row." +
+      "proto\"\207\003\n\nDdlRequest\022:\n\017create_database\030" +
+      "\001 \001(\0132\037.greptime.v1.CreateDatabaseExprH\000" +
+      "\0224\n\014create_table\030\002 \001(\0132\034.greptime.v1.Cre" +
+      "ateTableExprH\000\022\'\n\005alter\030\003 \001(\0132\026.greptime" +
+      ".v1.AlterExprH\000\0220\n\ndrop_table\030\004 \001(\0132\032.gr" +
+      "eptime.v1.DropTableExprH\000\0222\n\013flush_table" +
+      "\030\005 \001(\0132\033.greptime.v1.FlushTableExprH\000\0226\n" +
+      "\rcompact_table\030\006 \001(\0132\035.greptime.v1.Compa" +
+      "ctTableExprH\000\0228\n\016truncate_table\030\007 \001(\0132\036." +
+      "greptime.v1.TruncateTableExprH\000B\006\n\004expr\"" +
+      "\323\003\n\017CreateTableExpr\022\024\n\014catalog_name\030\001 \001(" +
+      "\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntable_name\030\003 \001" +
+      "(\t\022\014\n\004desc\030\004 \001(\t\022+\n\013column_defs\030\005 \003(\0132\026." +
+      "greptime.v1.ColumnDef\022\022\n\ntime_index\030\006 \001(" +
+      "\t\022\024\n\014primary_keys\030\007 \003(\t\022\034\n\024create_if_not" +
+      "_exists\030\010 \001(\010\022E\n\rtable_options\030\t \003(\0132..g" +
+      "reptime.v1.CreateTableExpr.TableOptionsE" +
+      "ntry\022&\n\010table_id\030\n \001(\0132\024.greptime.v1.Tab" +
+      "leId\022\026\n\016region_numbers\030\013 \003(\r\022\016\n\006engine\030\014" +
+      " \001(\t\0222\n\016partitions_def\030\r \001(\0132\032.greptime." +
+      "v1.PartitionsDef\0323\n\021TableOptionsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\277\002\n\rPartit" +
+      "ionsDef\022\024\n\014column_names\030\001 \003(\t\022?\n\016partiti" +
+      "on_defs\030\002 \003(\0132\'.greptime.v1.PartitionsDe" +
+      "f.PartitionDef\032\n\n\010MaxValue\032t\n\010ValueDef\0228" +
+      "\n\tmax_value\030\001 \001(\0132#.greptime.v1.Partitio" +
+      "nsDef.MaxValueH\000\022#\n\005value\030\002 \001(\0132\022.grepti" +
+      "me.v1.ValueH\000B\t\n\007content\032U\n\014PartitionDef" +
+      "\022\014\n\004name\030\001 \001(\t\0227\n\nvalue_defs\030\002 \003(\0132#.gre" +
+      "ptime.v1.PartitionsDef.ValueDef\"\245\002\n\tAlte" +
+      "rExpr\022\024\n\014catalog_name\030\001 \001(\t\022\023\n\013schema_na" +
+      "me\030\002 \001(\t\022\022\n\ntable_name\030\003 \001(\t\022.\n\013add_colu" +
+      "mns\030\004 \001(\0132\027.greptime.v1.AddColumnsH\000\0220\n\014" +
+      "drop_columns\030\005 \001(\0132\030.greptime.v1.DropCol" +
+      "umnsH\000\0220\n\014rename_table\030\006 \001(\0132\030.greptime." +
+      "v1.RenameTableH\000\022&\n\010table_id\030\007 \001(\0132\024.gre" +
+      "ptime.v1.TableId\022\025\n\rtable_version\030\010 \001(\004B" +
+      "\006\n\004kind\"v\n\rDropTableExpr\022\024\n\014catalog_name" +
+      "\030\001 \001(\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntable_nam" +
+      "e\030\003 \001(\t\022&\n\010table_id\030\004 \001(\0132\024.greptime.v1." +
+      "TableId\"\245\001\n\016FlushTableExpr\022\024\n\014catalog_na" +
+      "me\030\001 \001(\t\022\023\n\013schema_name\030\002 \001(\t\022\022\n\ntable_n" +
+      "ame\030\003 \001(\t\022\032\n\rregion_number\030\004 \001(\rH\000\210\001\001\022&\n" +
+      "\010table_id\030\005 \001(\0132\024.greptime.v1.TableIdB\020\n" +
+      "\016_region_number\"\177\n\020CompactTableExpr\022\024\n\014c" +
+      "atalog_name\030\001 \001(\t\022\023\n\013schema_name\030\002 \001(\t\022\022" +
+      "\n\ntable_name\030\003 \001(\t\022\032\n\rregion_number\030\004 \001(" +
+      "\rH\000\210\001\001B\020\n\016_region_number\"I\n\022CreateDataba" +
+      "seExpr\022\025\n\rdatabase_name\030\001 \001(\t\022\034\n\024create_" +
+      "if_not_exists\030\002 \001(\010\"z\n\021TruncateTableExpr" +
+      "\022\024\n\014catalog_name\030\001 \001(\t\022\023\n\013schema_name\030\002 " +
+      "\001(\t\022\022\n\ntable_name\030\003 \001(\t\022&\n\010table_id\030\004 \001(" +
+      "\0132\024.greptime.v1.TableId\"9\n\nAddColumns\022+\n" +
+      "\013add_columns\030\001 \003(\0132\026.greptime.v1.AddColu" +
+      "mn\"<\n\013DropColumns\022-\n\014drop_columns\030\001 \003(\0132" +
+      "\027.greptime.v1.DropColumn\"%\n\013RenameTable\022" +
+      "\026\n\016new_table_name\030\001 \001(\t\"\215\002\n\tAddColumn\022*\n" +
+      "\ncolumn_def\030\001 \001(\0132\026.greptime.v1.ColumnDe" +
+      "f\022\016\n\006is_key\030\002 \001(\010\0221\n\010location\030\003 \001(\0132\037.gr" +
+      "eptime.v1.AddColumn.Location\032\220\001\n\010Locatio" +
+      "n\022C\n\rlocation_type\030\001 \001(\0162,.greptime.v1.A" +
+      "ddColumn.Location.LocationType\022\031\n\021after_" +
+      "cloumn_name\030\002 \001(\t\"$\n\014LocationType\022\t\n\005FIR" +
+      "ST\020\000\022\t\n\005AFTER\020\001\"\032\n\nDropColumn\022\014\n\004name\030\001 " +
+      "\001(\t\"\025\n\007TableId\022\n\n\002id\030\001 \001(\rBL\n\016io.greptim" +
+      "e.v1B\003DdlZ5github.com/GreptimeTeam/grept" +
+      "ime-proto/go/greptime/v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.greptime.v1.Common.getDescriptor(),
+          io.greptime.v1.RowData.getDescriptor(),
         });
     internal_static_greptime_v1_DdlRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -20802,13 +20343,13 @@ java.lang.String defaultValue);
     internal_static_greptime_v1_PartitionsDef_MaxValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_greptime_v1_PartitionsDef_MaxValue_descriptor,
-        new java.lang.String[] { "Unused", });
+        new java.lang.String[] { });
     internal_static_greptime_v1_PartitionsDef_ValueDef_descriptor =
       internal_static_greptime_v1_PartitionsDef_descriptor.getNestedTypes().get(1);
     internal_static_greptime_v1_PartitionsDef_ValueDef_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_greptime_v1_PartitionsDef_ValueDef_descriptor,
-        new java.lang.String[] { "MaxValue", "Int32Value", "Float32Value", "Float64Value", "StringValue", "BoolValue", "Value", });
+        new java.lang.String[] { "MaxValue", "Value", "Content", });
     internal_static_greptime_v1_PartitionsDef_PartitionDef_descriptor =
       internal_static_greptime_v1_PartitionsDef_descriptor.getNestedTypes().get(2);
     internal_static_greptime_v1_PartitionsDef_PartitionDef_fieldAccessorTable = new
@@ -20894,6 +20435,7 @@ java.lang.String defaultValue);
         internal_static_greptime_v1_TableId_descriptor,
         new java.lang.String[] { "Id", });
     io.greptime.v1.Common.getDescriptor();
+    io.greptime.v1.RowData.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
